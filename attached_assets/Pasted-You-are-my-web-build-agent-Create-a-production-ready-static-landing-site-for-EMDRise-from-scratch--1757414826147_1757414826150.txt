@@ -1,0 +1,70 @@
+You are my web build agent. Create a production-ready, static landing site for EMDRise from scratch. Do NOT instruct me to edit files manually; you must create and modify all files yourself.
+
+GOALS
+- Brand: EMDRise (custom domain emdrise.com).
+- Hosting target: GitHub Pages with a CNAME file (emdrise.com).
+- No frameworks/build steps (plain HTML, CSS, JS).
+- Accessibility, SEO, and performance best practices.
+- Sections: Header, Hero (App Store badge placeholder + device video), continuous Endorsements ticker, How it works, Why EMDR, Features, Testimonials, FAQ, CTA, Footer.
+- Legal pages: /terms and /privacy (no .html in footer links).
+- Placeholder App Store badge and link (we’ll swap later).
+
+CREATE & OVERWRITE FILES
+1) index.html:
+   - Full semantic HTML with the sections above.
+   - <head> includes: <title>, meta description, canonical https://emdrise.com/, OG/Twitter tags, and JSON-LD (MobileApplication) with:
+     "url": "https://emdrise.com/",
+     "image": "https://emdrise.com/assets/og-image.jpg",
+     "potentialAction": { "type": "InstallAction", "target": "https://apps.apple.com/app/idYOUR_APP_ID" }
+   - Hero: headline, subhead; App Store badge placeholder; a phone-frame <video> with poster=/assets/promo-poster.jpg and optional source=/assets/emdrise-promo.mp4.
+   - Endorsements ticker: continuous, seamless, pause on hover, respects prefers-reduced-motion.
+   - Footer: © <span id="year"></span>, links to /terms and /privacy (no .html in hrefs).
+   - Images have alt text; focusable elements have keyboard/focus-visible support.
+
+2) styles.css:
+   - Define tokens (see below), responsive layout, sticky header, clear focus-visible outlines, strong contrast.
+   - Buttons use a gradient for primary CTAs.
+   - Keyframes for ticker; disable animation if prefers-reduced-motion.
+
+3) script.js:
+   - Set the current year in footer.
+   - FAQ accordion (only one <details> open at a time).
+   - IntersectionObserver to fade-in sections on scroll (inject a tiny <style> for .in transitions).
+
+4) Folders:
+   - /assets/ and /assets/endorse/
+
+   Placeholders to create and wire:
+   - /assets/emdrise-logo.svg
+   - /assets/app-store-badge.svg (temporary)
+   - /assets/iphone-frame.png
+   - /assets/promo-poster.jpg
+   - /assets/endorse/who.png, apa.png, va.png, nice.png, emdria.png
+
+5) terms.html and privacy.html:
+   - Minimal shells that import /styles.css and contain:
+     <main class="container"><h1>Terms of Use</h1></main>
+     <main class="container"><h1>Privacy Policy</h1></main>
+   - Add TODO comments saying I’ll paste the full legal text later.
+
+6) CNAME file at project root:
+   emdrise.com
+
+TOKENS (for styles.css):
+:root{
+  --primary-blue:#1E90FF;
+  --secondary-blue:#3B9DFF;
+  --primary-green:#05A660;
+  --accent:#F5A623;
+  --bg:#F8FAFC;
+  --surface:#FFFFFF;
+  --text:#1A202C;
+  --muted:#475569;
+  --border:#E2E8F0;
+  --radius:16px;
+  --maxw:1200px;
+}
+Body font: Inter (system-ui fallback). Primary buttons: gradient linear-gradient(135deg,var(--primary-blue),var(--primary-green)). Cards: var(--surface) with 1px solid var(--border).
+
+7) Initialise git and make an initial commit:
+"feat(site): scaffold EMDRise landing with SEO, accessibility, and CNAME"
