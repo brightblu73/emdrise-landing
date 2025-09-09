@@ -4,7 +4,7 @@ export default function Testimonials() {
       name: "Sarah M.",
       role: "Trauma Survivor",
       content: "EMDRise has been life-changing. The guided sessions helped me process trauma I've carried for years. I finally feel like myself again.",
-      image: "https://images.unsplash.com/photo-1494790108755-2616b612b47c?ixlib=rb-4.0.3&auto=format&fit=crop&w=60&h=60&q=80"
+      image: "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?ixlib=rb-4.0.3&auto=format&fit=crop&w=60&h=60&q=80"
     },
     {
       name: "Michael R.",
@@ -17,6 +17,12 @@ export default function Testimonials() {
       role: "Licensed Therapist",
       content: "I recommend EMDRise to clients for between-session support. The app follows proper EMDR protocols and provides valuable continuity of care.",
       image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&auto=format&fit=crop&w=60&h=60&q=80"
+    },
+    {
+      name: "Alex T.",
+      role: "Anxiety Sufferer",
+      content: "The convenience of having EMDR therapy on my phone has been incredible. I can work through anxiety triggers as they come up in real life.",
+      image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=60&h=60&q=80"
     }
   ];
 
@@ -30,7 +36,7 @@ export default function Testimonials() {
           </p>
         </div>
         
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8">
           {testimonials.map((testimonial, index) => (
             <div key={index} className="card-custom p-8" data-testid={`testimonial-${index + 1}`}>
               <div className="flex items-center mb-6">
