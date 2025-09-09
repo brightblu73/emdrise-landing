@@ -17,7 +17,7 @@ export default function Footer() {
               <img 
                 src="/assets/emdrise-logo.svg" 
                 alt="EMDRise - Professional EMDR Therapy App Logo" 
-                className="h-8"
+                className="h-10"
               />
             </div>
             <p className="text-muted leading-relaxed mb-6 max-w-md">

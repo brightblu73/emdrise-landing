@@ -9,7 +9,8 @@ export default function Header() {
           <img 
             src="/assets/emdrise-logo.svg" 
             alt="EMDRise - Professional EMDR Therapy App Logo" 
-            className="h-8"
+            className="h-[100px]"
+            style={{ height: '100px' }}
           />
         </Link>
         
