@@ -24,8 +24,8 @@ export default function HowItWorks() {
     <section id="how-it-works" className="py-20 fade-in-section">
       <div className="max-w-container mx-auto px-6">
         <div className="text-center mb-16">
-          <h2 className="text-4xl lg:text-5xl font-bold text-text-dark mb-6">How EMDRise Works</h2>
-          <p className="text-xl text-text-muted max-w-3xl mx-auto leading-relaxed">
+          <h2 className="text-4xl lg:text-5xl font-bold text-primary mb-6">How EMDRise Works</h2>
+          <p className="text-xl text-muted max-w-3xl mx-auto leading-relaxed">
             Our evidence-based approach guides you through structured EMDR therapy sessions designed by licensed professionals.
           </p>
         </div>
@@ -36,8 +36,8 @@ export default function HowItWorks() {
               <div className={`w-20 h-20 bg-gradient-to-br ${step.gradient} rounded-custom mx-auto mb-6 flex items-center justify-center`}>
                 <span className="text-white text-2xl font-bold">{step.number}</span>
               </div>
-              <h3 className="text-2xl font-semibold text-text-dark mb-4">{step.title}</h3>
-              <p className="text-text-muted leading-relaxed">
+              <h3 className="text-2xl font-semibold text-primary mb-4">{step.title}</h3>
+              <p className="text-muted leading-relaxed">
                 {step.description}
               </p>
             </div>

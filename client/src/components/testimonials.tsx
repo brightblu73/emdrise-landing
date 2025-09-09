@@ -21,11 +21,11 @@ export default function Testimonials() {
   ];
 
   return (
-    <section id="testimonials" className="py-20 bg-surface-white fade-in-section">
+    <section id="testimonials" className="py-20 bg-surface fade-in-section">
       <div className="max-w-container mx-auto px-6">
         <div className="text-center mb-16">
-          <h2 className="text-4xl lg:text-5xl font-bold text-text-dark mb-6">What Our Users Say</h2>
-          <p className="text-xl text-text-muted max-w-3xl mx-auto leading-relaxed">
+          <h2 className="text-4xl lg:text-5xl font-bold text-primary mb-6">What Our Users Say</h2>
+          <p className="text-xl text-muted max-w-3xl mx-auto leading-relaxed">
             Real stories from people who've transformed their lives with EMDRise.
           </p>
         </div>
@@ -40,14 +40,14 @@ export default function Testimonials() {
                   className="w-12 h-12 rounded-full mr-4"
                 />
                 <div>
-                  <div className="font-semibold text-text-dark">{testimonial.name}</div>
-                  <div className="text-sm text-text-muted">{testimonial.role}</div>
+                  <div className="font-semibold text-primary">{testimonial.name}</div>
+                  <div className="text-sm text-muted">{testimonial.role}</div>
                 </div>
               </div>
-              <p className="text-text-muted italic leading-relaxed mb-4">
+              <p className="text-muted italic leading-relaxed mb-4">
                 "{testimonial.content}"
               </p>
-              <div className="text-accent-orange">★★★★★</div>
+              <div style={{color: 'var(--accent)'}}>★★★★★</div>
             </div>
           ))}
         </div>

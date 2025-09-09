@@ -6,25 +6,25 @@ export default function Hero() {
       <div className="max-w-container mx-auto px-6">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           <div className="text-center lg:text-left">
-            <h1 className="text-5xl lg:text-6xl font-bold text-text-dark leading-tight mb-6">
+            <h1 className="text-5xl lg:text-6xl font-bold text-primary leading-tight mb-6">
               Professional <span className="text-gradient">EMDR Therapy</span> at Your Fingertips
             </h1>
-            <p className="text-xl text-text-muted leading-relaxed mb-8">
+            <p className="text-xl text-muted leading-relaxed mb-8">
               Evidence-based trauma treatment through guided EMDR sessions. Trusted by thousands of users and endorsed by leading mental health organizations.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-8">
-              <Button className="btn-primary px-8 py-4 rounded-custom font-semibold text-lg" data-testid="button-start-trial">
+              <Button className="btn-primary font-semibold text-lg" data-testid="button-start-trial">
                 Start Free Trial
               </Button>
-              <Button variant="outline" className="border-2 border-border-light text-text-dark px-8 py-4 rounded-custom font-semibold text-lg hover:bg-surface-white" data-testid="button-learn-more">
+              <Button variant="outline" className="border-2 border-custom text-primary px-8 py-4 rounded-custom font-semibold text-lg hover:bg-surface" data-testid="button-learn-more">
                 Learn More
               </Button>
             </div>
             
             {/* App Store Badge Placeholder */}
             <div className="flex justify-center lg:justify-start">
-              <div className="bg-text-dark rounded-lg px-6 py-3 flex items-center space-x-3 cursor-pointer hover:bg-opacity-90 transition-opacity" data-testid="link-app-store">
+              <div className="bg-primary rounded-custom px-6 py-3 flex items-center space-x-3 cursor-pointer hover:opacity-90 transition-opacity" data-testid="link-app-store">
                 <div className="w-8 h-8 bg-white rounded-md"></div>
                 <div>
                   <div className="text-xs text-white/70">Download on the</div>

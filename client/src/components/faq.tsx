@@ -35,8 +35,8 @@ export default function FAQ() {
     <section id="faq" className="py-20 fade-in-section">
       <div className="max-w-4xl mx-auto px-6">
         <div className="text-center mb-16">
-          <h2 className="text-4xl lg:text-5xl font-bold text-text-dark mb-6">Frequently Asked Questions</h2>
-          <p className="text-xl text-text-muted leading-relaxed">
+          <h2 className="text-4xl lg:text-5xl font-bold text-primary mb-6">Frequently Asked Questions</h2>
+          <p className="text-xl text-muted leading-relaxed">
             Get answers to common questions about EMDRise and EMDR therapy.
           </p>
         </div>
@@ -49,15 +49,15 @@ export default function FAQ() {
                 onClick={() => toggleItem(index)}
                 data-testid={`faq-button-${index + 1}`}
               >
-                <h3 className="text-xl font-semibold text-text-dark pr-4">{faq.question}</h3>
+                <h3 className="text-xl font-semibold text-primary pr-4">{faq.question}</h3>
                 <Plus 
-                  className={`text-2xl text-text-muted transition-transform ${openItem === index ? 'rotate-45' : ''}`}
+                  className={`text-2xl text-muted transition-transform ${openItem === index ? 'rotate-45' : ''}`}
                   size={24}
                 />
               </button>
               {openItem === index && (
                 <div className="px-6 pb-6" data-testid={`faq-answer-${index + 1}`}>
-                  <p className="text-text-muted leading-relaxed">
+                  <p className="text-muted leading-relaxed">
                     {faq.answer}
                   </p>
                 </div>

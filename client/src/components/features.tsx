@@ -42,8 +42,8 @@ export default function Features() {
     <section id="features" className="py-20 fade-in-section">
       <div className="max-w-container mx-auto px-6">
         <div className="text-center mb-16">
-          <h2 className="text-4xl lg:text-5xl font-bold text-text-dark mb-6">Powerful Features</h2>
-          <p className="text-xl text-text-muted max-w-3xl mx-auto leading-relaxed">
+          <h2 className="text-4xl lg:text-5xl font-bold text-primary mb-6">Powerful Features</h2>
+          <p className="text-xl text-muted max-w-3xl mx-auto leading-relaxed">
             Everything you need for effective EMDR therapy, designed with input from licensed professionals.
           </p>
         </div>
@@ -54,8 +54,8 @@ export default function Features() {
               <div className={`w-16 h-16 bg-gradient-to-br ${feature.gradient} rounded-custom mb-6 flex items-center justify-center`}>
                 <span className="text-white text-2xl">{feature.icon}</span>
               </div>
-              <h3 className="text-xl font-semibold text-text-dark mb-4">{feature.title}</h3>
-              <p className="text-text-muted">{feature.description}</p>
+              <h3 className="text-xl font-semibold text-primary mb-4">{feature.title}</h3>
+              <p className="text-muted">{feature.description}</p>
             </div>
           ))}
         </div>

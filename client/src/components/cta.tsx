@@ -11,7 +11,7 @@ export default function CTA() {
         
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <Button 
-            className="bg-white text-primary-blue px-8 py-4 rounded-custom font-semibold text-lg hover:bg-gray-50 transition-colors focus-visible"
+            className="bg-white text-primary px-8 py-4 rounded-custom font-semibold text-lg hover:bg-gray-50 transition-colors focus-visible"
             data-testid="button-download-ios"
           >
             Download for iOS

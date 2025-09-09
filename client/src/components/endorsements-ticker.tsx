@@ -8,7 +8,7 @@ export default function EndorsementsTicker() {
   ];
 
   return (
-    <section className="py-12 border-y border-border-light">
+    <section className="py-12 border-y border-custom">
       <div className="ticker-container">
         <div className="ticker-track">
           {/* First set of endorsements */}
@@ -18,7 +18,7 @@ export default function EndorsementsTicker() {
                 <div className={`w-12 h-12 ${endorsement.bgColor} rounded-lg flex items-center justify-center`}>
                   <span className="text-white font-bold text-xs">{endorsement.logo}</span>
                 </div>
-                <span className="font-semibold text-text-muted whitespace-nowrap">{endorsement.name}</span>
+                <span className="font-semibold text-muted whitespace-nowrap">{endorsement.name}</span>
               </div>
             ))}
           </div>
@@ -30,7 +30,7 @@ export default function EndorsementsTicker() {
                 <div className={`w-12 h-12 ${endorsement.bgColor} rounded-lg flex items-center justify-center`}>
                   <span className="text-white font-bold text-xs">{endorsement.logo}</span>
                 </div>
-                <span className="font-semibold text-text-muted whitespace-nowrap">{endorsement.name}</span>
+                <span className="font-semibold text-muted whitespace-nowrap">{endorsement.name}</span>
               </div>
             ))}
           </div>

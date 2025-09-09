@@ -18,7 +18,7 @@ export default function WhyEMDR() {
   ];
 
   return (
-    <section className="py-20 bg-surface-white fade-in-section">
+    <section className="py-20 bg-surface fade-in-section">
       <div className="max-w-container mx-auto px-6">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           <div>
@@ -31,7 +31,7 @@ export default function WhyEMDR() {
           </div>
           
           <div>
-            <h2 className="text-4xl lg:text-5xl font-bold text-text-dark mb-8">Why EMDR Therapy?</h2>
+            <h2 className="text-4xl lg:text-5xl font-bold text-primary mb-8">Why EMDR Therapy?</h2>
             
             <div className="space-y-6">
               {benefits.map((benefit, index) => (
@@ -40,14 +40,14 @@ export default function WhyEMDR() {
                     <Check className="text-white text-sm" size={16} />
                   </div>
                   <div>
-                    <h4 className="text-xl font-semibold text-text-dark mb-2">{benefit.title}</h4>
-                    <p className="text-text-muted">{benefit.description}</p>
+                    <h4 className="text-xl font-semibold text-primary mb-2">{benefit.title}</h4>
+                    <p className="text-muted">{benefit.description}</p>
                   </div>
                 </div>
               ))}
             </div>
             
-            <Button className="btn-primary px-8 py-4 rounded-custom font-semibold text-lg mt-8" data-testid="button-learn-emdr">
+            <Button className="btn-primary font-semibold text-lg mt-8" data-testid="button-learn-emdr">
               Learn About EMDR
             </Button>
           </div>
