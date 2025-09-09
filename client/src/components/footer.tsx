@@ -14,10 +14,11 @@ export default function Footer() {
         <div className="grid md:grid-cols-4 gap-12">
           <div className="md:col-span-2">
             <div className="flex items-center space-x-3 mb-6">
-              <div className="w-10 h-10 bg-gradient-to-br from-primary-blue to-primary-green rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-lg">E</span>
-              </div>
-              <span className="text-2xl font-bold text-primary">EMDRise</span>
+              <img 
+                src="/assets/emdrise-logo.svg" 
+                alt="EMDRise - Professional EMDR Therapy App Logo" 
+                className="h-8"
+              />
             </div>
             <p className="text-muted leading-relaxed mb-6 max-w-md">
               Professional EMDR therapy accessible to everyone. Evidence-based treatment for trauma, anxiety, and PTSD.

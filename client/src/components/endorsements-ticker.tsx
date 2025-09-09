@@ -1,10 +1,10 @@
 export default function EndorsementsTicker() {
   const endorsements = [
-    { name: "World Health Organization", logo: "WHO", bgColor: "bg-blue-600" },
-    { name: "American Psychological Association", logo: "APA", bgColor: "bg-red-600" },
-    { name: "Department of Veterans Affairs", logo: "VA", bgColor: "bg-green-600" },
-    { name: "National Institute for Health", logo: "NICE", bgColor: "bg-purple-600" },
-    { name: "EMDR International Association", logo: "EMDR", bgColor: "bg-orange-600" },
+    { name: "World Health Organization", logo: "/assets/endorse/who.png", alt: "World Health Organization logo - endorsing EMDR therapy" },
+    { name: "American Psychological Association", logo: "/assets/endorse/apa.png", alt: "American Psychological Association logo - EMDR therapy endorsement" },
+    { name: "Department of Veterans Affairs", logo: "/assets/endorse/va.png", alt: "Department of Veterans Affairs logo - supporting EMDR for veterans" },
+    { name: "National Institute for Health", logo: "/assets/endorse/nice.png", alt: "National Institute for Health and Care Excellence logo - EMDR guidelines" },
+    { name: "EMDR International Association", logo: "/assets/endorse/emdria.png", alt: "EMDR International Association logo - professional standards" },
   ];
 
   return (
@@ -14,10 +14,12 @@ export default function EndorsementsTicker() {
           {/* First set of endorsements */}
           <div className="flex items-center space-x-16 px-8">
             {endorsements.map((endorsement, index) => (
-              <div key={`first-${index}`} className="flex items-center space-x-3" data-testid={`endorsement-${endorsement.logo.toLowerCase()}-1`}>
-                <div className={`w-12 h-12 ${endorsement.bgColor} rounded-lg flex items-center justify-center`}>
-                  <span className="text-white font-bold text-xs">{endorsement.logo}</span>
-                </div>
+              <div key={`first-${index}`} className="flex items-center space-x-3" data-testid={`endorsement-${endorsement.name.toLowerCase().replace(/\s+/g, '-')}-1`}>
+                <img 
+                  src={endorsement.logo} 
+                  alt={endorsement.alt}
+                  className="w-12 h-12 object-contain"
+                />
                 <span className="font-semibold text-muted whitespace-nowrap">{endorsement.name}</span>
               </div>
             ))}
@@ -26,10 +28,12 @@ export default function EndorsementsTicker() {
           {/* Duplicate set for seamless loop */}
           <div className="flex items-center space-x-16 px-8">
             {endorsements.map((endorsement, index) => (
-              <div key={`second-${index}`} className="flex items-center space-x-3" data-testid={`endorsement-${endorsement.logo.toLowerCase()}-2`}>
-                <div className={`w-12 h-12 ${endorsement.bgColor} rounded-lg flex items-center justify-center`}>
-                  <span className="text-white font-bold text-xs">{endorsement.logo}</span>
-                </div>
+              <div key={`second-${index}`} className="flex items-center space-x-3" data-testid={`endorsement-${endorsement.name.toLowerCase().replace(/\s+/g, '-')}-2`}>
+                <img 
+                  src={endorsement.logo} 
+                  alt={endorsement.alt}
+                  className="w-12 h-12 object-contain"
+                />
                 <span className="font-semibold text-muted whitespace-nowrap">{endorsement.name}</span>
               </div>
             ))}

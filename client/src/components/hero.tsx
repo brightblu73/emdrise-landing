@@ -23,33 +23,35 @@ export default function Hero() {
             </div>
             
             {/* App Store Badge Placeholder */}
+            {/* TODO: Replace with official App Store badge and real App Store link when available */}
             <div className="flex justify-center lg:justify-start">
-              <div className="bg-primary rounded-custom px-6 py-3 flex items-center space-x-3 cursor-pointer hover:opacity-90 transition-opacity" data-testid="link-app-store">
-                <div className="w-8 h-8 bg-white rounded-md"></div>
-                <div>
-                  <div className="text-xs text-white/70">Download on the</div>
-                  <div className="text-lg font-semibold text-white">App Store</div>
-                </div>
-              </div>
+              <a href="#" className="hover:opacity-90 transition-opacity" data-testid="link-app-store">
+                <img 
+                  src="/assets/app-store-badge.svg" 
+                  alt="Download EMDRise on the App Store - Placeholder Badge" 
+                  className="h-12"
+                />
+              </a>
             </div>
           </div>
           
           <div className="flex justify-center">
             <div className="phone-mockup">
               <img 
-                src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?ixlib=rb-4.0.3&auto=format&fit=crop&w=280&h=560" 
-                alt="iPhone frame mockup" 
+                src="/assets/iphone-frame.png" 
+                alt="iPhone device frame for EMDRise app demonstration" 
                 className="phone-frame" 
               />
               <video 
                 className="phone-video" 
-                poster="https://images.unsplash.com/photo-1593811167562-9cef47bfc4d7?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=600" 
+                poster="/assets/promo-poster.jpg" 
                 muted 
                 loop 
                 autoPlay
                 data-testid="video-promo"
               >
                 <source src="/assets/emdrise-promo.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
               </video>
             </div>
           </div>
