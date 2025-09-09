@@ -41,18 +41,26 @@
   --font-mono: Menlo, monospace;
   --radius: 1rem;
 
-  /* EMDRise brand tokens - exact specification */
-  --primary-blue: #1E90FF;
-  --secondary-blue: #3B9DFF;
-  --primary-green: #05A660;
-  --accent: #F5A623;
-  --bg: #F8FAFC;
-  --surface: #FFFFFF;
-  --text: #1A202C;
-  --muted: #475569;
-  --border: #E2E8F0;
-  --radius: 16px;
-  --maxw: 1200px;
+  /* EMDRise brand tokens - exact brand guidelines specification */
+  --primary-blue: hsl(217, 88%, 58%);        /* #1E90FF */
+  --secondary-blue: hsl(212, 92%, 66%);      /* #3B9DFF */
+  --primary-green: hsl(158, 92%, 40%);       /* #05A660 */
+  --secondary-green: hsl(162, 83%, 58%);     /* #1DD1A1 */
+  --warm-accent: hsl(41, 96%, 48%);          /* #F5A623 */
+  
+  /* Therapeutic background colors */
+  --therapeutic-bg: hsl(210, 40%, 98%);      /* #F8FAFC */
+  --safe-space: hsl(158, 30%, 95%);          /* #F0F7F4 */
+  
+  /* Neutral colors per guidelines */
+  --foreground: hsl(222, 47%, 11%);          /* #1A202C */
+  --muted-text: hsl(210, 30%, 96%);          /* #F1F5F9 */
+  --border-custom: hsl(214, 32%, 91%);       /* #E2E8F0 */
+  --card-bg: hsl(210, 35%, 97%);             /* #F7FAFC */
+  
+  /* Layout specifications */
+  --radius-custom: 12px;                     /* rounded-xl per guidelines */
+  --container-max: 896px;                    /* 4xl per guidelines */
 }
 
 .dark {
@@ -93,22 +101,50 @@
   body {
     @apply font-sans antialiased;
     font-family: 'Inter', system-ui, sans-serif;
-    background-color: var(--bg);
-    color: var(--text);
+    background-color: var(--therapeutic-bg);
+    color: var(--foreground);
   }
 
-  h1, h2, h3, h4, h5, h6 {
+  /* Typography hierarchy per brand guidelines */
+  h1 {
+    @apply font-bold;  /* 700 weight per guidelines */
+    font-size: 2.5rem; /* Base size per guidelines */
+  }
+  
+  @media (min-width: 768px) {
+    h1 {
+      font-size: 3rem; /* md: 3rem per guidelines */
+    }
+  }
+
+  h2 {
+    @apply font-semibold; /* 600 weight per guidelines */
+    font-size: 1.5rem; /* Base size per guidelines */
+  }
+  
+  @media (min-width: 768px) {
+    h2 {
+      font-size: 1.875rem; /* md: 1.875rem per guidelines */
+    }
+  }
+
+  h3, h4, h5, h6 {
     @apply font-semibold;
   }
 }
 
 @layer components {
+  /* EMDR Gradient - exact brand guidelines specification */
+  .emdr-gradient {
+    background: linear-gradient(135deg, var(--primary-blue), var(--primary-green));
+  }
+  
   .btn-primary,
   .btn.solid {
     background: linear-gradient(135deg, var(--primary-blue), var(--primary-green));
     color: white;
     border: none;
-    border-radius: var(--radius);
+    border-radius: var(--radius-custom);
     font-weight: 500;
     transition: all 0.3s ease;
     padding: 12px 24px;
