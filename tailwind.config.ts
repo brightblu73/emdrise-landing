@@ -9,10 +9,10 @@ export default {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
-        custom: "var(--custom-radius)",
+        custom: "var(--radius-custom)",
       },
       maxWidth: {
-        container: "var(--max-width)",
+        container: "var(--container-max)",
       },
       colors: {
         background: "var(--background)",
@@ -65,16 +65,15 @@ export default {
           border: "var(--sidebar-border)",
           ring: "var(--sidebar-ring)",
         },
-        // EMDRise brand colors
+        // EMDRise brand colors per brand guidelines
         "primary-blue": "var(--primary-blue)",
-        "secondary-blue": "var(--secondary-blue)",
+        "secondary-blue": "var(--secondary-blue)", 
         "primary-green": "var(--primary-green)",
-        "accent-orange": "var(--accent-orange)",
-        "bg-light": "var(--bg-light)",
-        "surface-white": "var(--surface-white)",
-        "text-dark": "var(--text-dark)",
-        "text-muted": "var(--text-muted)",
-        "border-light": "var(--border-light)",
+        "secondary-green": "var(--secondary-green)",
+        "warm-accent": "var(--warm-accent)",
+        "therapeutic-bg": "var(--therapeutic-bg)",
+        "safe-space": "var(--safe-space)",
+        "card-bg": "var(--card-bg)",
       },
       fontFamily: {
         sans: ["var(--font-sans)"],

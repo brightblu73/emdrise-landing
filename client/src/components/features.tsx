@@ -16,13 +16,13 @@ export default function Features() {
       icon: "🔒",
       title: "Privacy First", 
       description: "End-to-end encryption ensures your therapy sessions remain completely confidential.",
-      gradient: "from-primary-green to-accent-orange"
+      gradient: "from-primary-green to-warm-accent"
     },
     {
       icon: "🎯",
       title: "Personalized Plans",
       description: "AI-driven treatment recommendations based on your unique needs and progress.",
-      gradient: "from-accent-orange to-primary-blue"
+      gradient: "from-warm-accent to-primary-blue"
     },
     {
       icon: "🧘",
@@ -34,7 +34,7 @@ export default function Features() {
       icon: "📱",
       title: "Offline Access",
       description: "Download sessions for offline use, ensuring therapy is available whenever you need it.",
-      gradient: "from-secondary-blue to-accent-orange"
+      gradient: "from-secondary-blue to-warm-accent"
     }
   ];
 

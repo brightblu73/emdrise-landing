@@ -178,7 +178,7 @@
   }
 
   .footer-soft {
-    background-color: #F7FAFC;
+    background-color: var(--card-bg);
   }
 
   .footer-link {
@@ -193,7 +193,7 @@
   .ticker-container {
     overflow: hidden;
     position: relative;
-    background-color: var(--surface);
+    background-color: white;
   }
 
   .ticker-track {
@@ -252,7 +252,7 @@
   }
 
   .container-max {
-    max-width: var(--maxw);
+    max-width: var(--container-max);
     margin: 0 auto;
     padding: 0 24px;
   }
@@ -273,31 +273,31 @@
   }
 
   .max-w-container {
-    max-width: var(--maxw);
+    max-width: var(--container-max);
   }
 
   .rounded-custom {
-    border-radius: var(--radius);
+    border-radius: var(--radius-custom);
   }
 
   .bg-surface {
-    background-color: var(--surface);
+    background-color: white;
   }
 
   .bg-light {
-    background-color: var(--bg);
+    background-color: var(--therapeutic-bg);
   }
 
   .text-primary {
-    color: var(--text);
+    color: var(--primary-blue);
   }
 
   .text-muted {
-    color: var(--muted);
+    color: var(--foreground);
   }
 
   .border-custom {
-    border-color: var(--border);
+    border-color: var(--border-custom);
   }
 }
 
