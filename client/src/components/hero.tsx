@@ -6,10 +6,10 @@ export default function Hero() {
       <div className="max-w-container mx-auto px-6">
         <div className="text-center max-w-4xl mx-auto">
           <h1 className="text-5xl lg:text-6xl font-bold text-primary leading-tight mb-6">
-            Professional <span className="text-gradient">EMDR Therapy</span> at Your Fingertips
+            Professional <span className="text-gradient">Self-Directed EMDR</span> In Your Own Space
           </h1>
           <p className="text-xl text-muted leading-relaxed mb-8">
-            Evidence-based trauma treatment through guided EMDR sessions. Trusted by thousands of users and endorsed by leading mental health organizations.
+            Led by a therapist-designed video guide. Walking with you step be step offering structure, support, and connection when you need it most.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
