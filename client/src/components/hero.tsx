@@ -12,23 +12,12 @@ export default function Hero() {
             Led by a therapist-designed video guide. Walking with you step be step offering structure, support, and connection when you need it most.
           </p>
           
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-            <Button className="btn-primary font-semibold text-lg" data-testid="button-start-trial">
-              Start Free Trial
-            </Button>
-            <Button variant="outline" className="border-2 border-custom text-primary px-8 py-4 rounded-custom font-semibold text-lg hover:bg-surface" data-testid="button-learn-more">
-              Learn More
-            </Button>
-          </div>
-          
-          {/* App Store Badge Placeholder */}
-          {/* TODO: Replace with official App Store badge and real App Store link when available */}
-          <div className="flex justify-center">
+          <div className="flex justify-center mt-8">
             <a href="#" className="hover:opacity-90 transition-opacity" data-testid="link-app-store">
               <img 
-                src="/assets/app-store-badge.svg" 
-                alt="Download EMDRise on the App Store - Placeholder Badge" 
-                className="h-12"
+                src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" 
+                alt="Download EMDRise on the App Store" 
+                className="h-16"
               />
             </a>
           </div>
