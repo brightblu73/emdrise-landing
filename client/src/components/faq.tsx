@@ -14,32 +14,68 @@ export default function FAQ() {
       answer: "No. EMDRise is not a medical device and is not a substitute for therapy with a qualified mental health professional. It is best used as a wellness and self-help tool for self-guided EMDR practice, complementing professional care or supporting individuals between therapy sessions."
     },
     {
+      question: "Who created EMDRise?",
+      answer: "EMDRise was developed by a small team of qualified and accredited CBT and EMDR therapists. The aim was to create an evidence-informed, professional, and accessible EMDR self-help platform that empowers users to practice self-guided therapy safely and effectively."
+    },
+    {
+      question: "Do I need an account to use EMDRise?",
+      answer: "Yes. You need to create an account to access the app. You can sign up using Apple, Google, or email and password."
+    },
+    {
+      question: "Do I need to agree to Terms and Privacy Policy?",
+      answer: "Yes. On sign-up, users must confirm that they have read and agreed to EMDRise's Terms of Use and Privacy Policy."
+    },
+    {
+      question: "How do I delete my account?",
+      answer: "You can request full account deletion within the app. This will permanently remove your data."
+    },
+    {
       question: "Is EMDRise free?",
       answer: "EMDRise offers a 7-day free trial so users can explore its guided EMDR therapy sessions. After that, a subscription is required to continue using the app. This ensures ongoing access to self-guided EMDR tools, therapist-led videos, and bilateral stimulation modes."
     },
     {
-      question: "What types of bilateral stimulation are available?",
-      answer: "EMDRise offers three types of bilateral stimulation: Visual (moving dots across the screen), Auditory (alternating stereo tones), and Tactile (self-tapping prompts). You can choose the method that works best for you during each session."
+      question: "How much does it cost?",
+      answer: "EMDRise is available on a monthly subscription. Pricing may vary by region — please check your app store for the latest price."
+    },
+    {
+      question: "How are payments handled?",
+      answer: "Payments are managed securely through your device's app store (Apple App Store or Google Play)."
+    },
+    {
+      question: "How do I cancel my subscription?",
+      answer: "Subscriptions can be managed and cancelled directly through your app store account settings."
     },
     {
       question: "What does a session look like?",
       answer: "Each session follows the standard EMDR protocol with therapist-led videos and bilateral stimulation. The core journey includes: Preparation, Target Memory Setup, Reprocessing, Installation of Positive Belief, Body Scan, and Closure and Aftercare."
     },
     {
+      question: "What if I can't finish a session?",
+      answer: "The app includes a 'safe closure' option. If you pause, you can return later and resume from where you left off."
+    },
+    {
+      question: "What types of bilateral stimulation are available?",
+      answer: "Visual: moving dots across the screen, Auditory: alternating stereo tones, Tactile: self-tapping prompts."
+    },
+    {
+      question: "What are SUDS and VOC ratings?",
+      answer: "SUDS (Subjective Units of Distress Scale) lets you rate your distress during reprocessing (0 = no distress, 10 = highest). VOC (Validity of Cognition) helps you rate how true your positive belief feels (1 = completely false, 7 = completely true)."
+    },
+    {
       question: "How is my data protected?",
       answer: "EMDRise is fully GDPR and UK Data Protection Act compliant. All user data is encrypted in transit and at rest, and stored securely on trusted platforms. The app follows strict data minimisation principles, collecting only what is necessary to provide safe and effective self-help and therapy support."
     },
     {
-      question: "What if I can't finish a session?",
-      answer: "The app includes a 'safe closure' option. If you pause, you can return later and resume from where you left off. This ensures you can always safely exit a session if needed."
+      question: "Does EMDRise share my personal data?",
+      answer: "No. EMDRise does not sell or share your personal data with third parties for marketing."
+    },
+    {
+      question: "What happens if I stop using EMDRise?",
+      answer: "If you delete your account, all session data will be permanently removed."
     },
     {
       question: "What if I feel overwhelmed during a session?",
       answer: "The app includes grounding tools (e.g., calm place visualisation) and safe closure steps. If distress continues, we recommend pausing the session and seeking support from a qualified therapist."
-    },
-    {
-      question: "How can I cancel my subscription?",
-      answer: "Subscriptions can be managed and cancelled directly through your app store account settings (Apple App Store or Google Play)."
     },
     {
       question: "How can I contact support?",
