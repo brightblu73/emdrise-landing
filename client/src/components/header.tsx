@@ -1,5 +1,4 @@
 import { Link } from "wouter";
-import { Button } from "@/components/ui/button";
 
 export default function Header() {
   return (
@@ -28,10 +27,6 @@ export default function Header() {
             FAQ
           </a>
         </div>
-        
-        <Button className="btn-primary" data-testid="button-download">
-          Download App
-        </Button>
       </nav>
     </header>
   );
