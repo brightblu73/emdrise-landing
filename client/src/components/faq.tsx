@@ -6,24 +6,44 @@ export default function FAQ() {
 
   const faqs = [
     {
-      question: "Is EMDRise a replacement for professional therapy?",
-      answer: "No, EMDRise is designed to supplement professional therapy, not replace it. We recommend using our app under the guidance of a licensed mental health professional or as a continuation of professional EMDR therapy."
+      question: "What is EMDRise?",
+      answer: "EMDRise is a self-guided EMDR (Eye Movement Desensitisation and Reprocessing) self-help app. It provides structured guided EMDR therapy sessions led by professional videos, combined with bilateral stimulation (visual, auditory, and tapping). It is designed for individuals looking for accessible tools to support their emotional healing, mental health, and self-guided therapy journey."
     },
     {
-      question: "How does the bilateral stimulation work?",
-      answer: "EMDRise offers multiple forms of bilateral stimulation including visual (moving objects), auditory (alternating sounds), and tactile (vibration patterns). You can choose the method that works best for you during each session."
+      question: "Is EMDRise a replacement for therapy with a clinician?",
+      answer: "No. EMDRise is not a medical device and is not a substitute for therapy with a qualified mental health professional. It is best used as a wellness and self-help tool for self-guided EMDR practice, complementing professional care or supporting individuals between therapy sessions."
     },
     {
-      question: "Is my data secure and private?",
-      answer: "Yes, we use end-to-end encryption for all user data and sessions. Your personal information and therapy content are never shared with third parties and remain completely confidential. We comply with HIPAA privacy standards."
+      question: "Is EMDRise free?",
+      answer: "EMDRise offers a 7-day free trial so users can explore its guided EMDR therapy sessions. After that, a subscription is required to continue using the app. This ensures ongoing access to self-guided EMDR tools, therapist-led videos, and bilateral stimulation modes."
     },
     {
-      question: "Can I use EMDRise for any type of trauma?",
-      answer: "EMDRise can be helpful for various types of trauma, including single-incident trauma, complex trauma, and PTSD. However, we recommend consultation with a mental health professional to determine if EMDR is appropriate for your specific situation."
+      question: "What types of bilateral stimulation are available?",
+      answer: "EMDRise offers three types of bilateral stimulation: Visual (moving dots across the screen), Auditory (alternating stereo tones), and Tactile (self-tapping prompts). You can choose the method that works best for you during each session."
     },
     {
-      question: "How much does EMDRise cost?",
-      answer: "EMDRise offers a free trial with basic features. Our premium subscription provides access to all guided sessions, progress tracking, and personalized treatment plans. Visit our pricing page for detailed information."
+      question: "What does a session look like?",
+      answer: "Each session follows the standard EMDR protocol with therapist-led videos and bilateral stimulation. The core journey includes: Preparation, Target Memory Setup, Reprocessing, Installation of Positive Belief, Body Scan, and Closure and Aftercare."
+    },
+    {
+      question: "How is my data protected?",
+      answer: "EMDRise is fully GDPR and UK Data Protection Act compliant. All user data is encrypted in transit and at rest, and stored securely on trusted platforms. The app follows strict data minimisation principles, collecting only what is necessary to provide safe and effective self-help and therapy support."
+    },
+    {
+      question: "What if I can't finish a session?",
+      answer: "The app includes a 'safe closure' option. If you pause, you can return later and resume from where you left off. This ensures you can always safely exit a session if needed."
+    },
+    {
+      question: "What if I feel overwhelmed during a session?",
+      answer: "The app includes grounding tools (e.g., calm place visualisation) and safe closure steps. If distress continues, we recommend pausing the session and seeking support from a qualified therapist."
+    },
+    {
+      question: "How can I cancel my subscription?",
+      answer: "Subscriptions can be managed and cancelled directly through your app store account settings (Apple App Store or Google Play)."
+    },
+    {
+      question: "How can I contact support?",
+      answer: "You can reach us at support@emdrise.com for technical or account issues."
     }
   ];
 
