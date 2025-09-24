@@ -22,12 +22,17 @@ export default function WhyEMDR() {
       <div className="max-w-container mx-auto px-6">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           <div>
-            <img 
-              src="https://images.unsplash.com/photo-1559757175-0eb30cd8c063?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400" 
-              alt="Professional therapy setting with comfortable seating" 
-              className="rounded-custom shadow-lg w-full"
-              data-testid="img-therapy-setting"
-            />
+            <div className="bg-surface rounded-custom shadow-lg w-full aspect-video flex items-center justify-center border-2 border-dashed border-gray-300">
+              <div className="text-center p-8">
+                <div className="w-16 h-16 bg-primary-blue rounded-full flex items-center justify-center mx-auto mb-4">
+                  <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clipRule="evenodd" />
+                  </svg>
+                </div>
+                <h3 className="text-lg font-semibold text-primary mb-2">Therapist Video</h3>
+                <p className="text-sm text-muted">What is EMDR? - Professional explanation</p>
+              </div>
+            </div>
           </div>
           
           <div>
