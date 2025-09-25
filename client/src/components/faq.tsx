@@ -31,11 +31,7 @@ export default function FAQ() {
     },
     {
       question: "Is EMDRise free?",
-      answer: "EMDRise offers a 7-day free trial so users can explore its guided EMDR therapy sessions. After that, a subscription is required to continue using the app. This ensures ongoing access to self-guided EMDR tools, therapist-led videos, and bilateral stimulation modes."
-    },
-    {
-      question: "How much does it cost?",
-      answer: "EMDRise is available on a monthly subscription. Pricing may vary by region — please check your app store for the latest price."
+      answer: "EMDRise offers a 7-day free trial so users can explore its guided EMDR therapy sessions. After that, a subscription is required to continue using the app. This ensures ongoing access to self-guided EMDR tools, therapist-led videos, and bilateral stimulation modes. EMDRise is available on a monthly subscription. Pricing may vary by region — please check your app store for the latest price."
     },
     {
       question: "How are payments handled?",
