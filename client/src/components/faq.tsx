@@ -62,10 +62,6 @@ export default function FAQ() {
       answer: "No. EMDRise does not sell or share your personal data with third parties for marketing."
     },
     {
-      question: "What happens if I stop using EMDRise?",
-      answer: "If you delete your account, all session data will be permanently removed."
-    },
-    {
       question: "What if I feel overwhelmed during a session?",
       answer: "The app includes grounding tools (e.g., calm place visualisation) and safe closure steps. If distress continues, we recommend pausing the session and seeking support from a qualified therapist."
     },
@@ -90,9 +86,9 @@ export default function FAQ() {
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
-          {/* First block of 9 FAQs */}
+          {/* First block of 8 FAQs */}
           <div className="space-y-4">
-            {faqs.slice(0, 9).map((faq, index) => (
+            {faqs.slice(0, 8).map((faq, index) => (
               <div key={index} className="card-custom" data-testid={`faq-item-${index + 1}`}>
                 <button 
                   className="w-full p-6 text-left flex items-center justify-between focus-visible"
@@ -118,21 +114,21 @@ export default function FAQ() {
           
           {/* Second block of 8 FAQs */}
           <div className="space-y-4">
-            {faqs.slice(9, 17).map((faq, index) => (
-              <div key={index + 9} className="card-custom" data-testid={`faq-item-${index + 10}`}>
+            {faqs.slice(8, 16).map((faq, index) => (
+              <div key={index + 8} className="card-custom" data-testid={`faq-item-${index + 9}`}>
                 <button 
                   className="w-full p-6 text-left flex items-center justify-between focus-visible"
-                  onClick={() => toggleItem(index + 9)}
-                  data-testid={`faq-button-${index + 10}`}
+                  onClick={() => toggleItem(index + 8)}
+                  data-testid={`faq-button-${index + 9}`}
                 >
                   <h3 className="text-xl font-semibold text-primary pr-4">{faq.question}</h3>
                   <Plus 
-                    className={`text-2xl text-muted transition-transform ${openItem === index + 9 ? 'rotate-45' : ''}`}
+                    className={`text-2xl text-muted transition-transform ${openItem === index + 8 ? 'rotate-45' : ''}`}
                     size={24}
                   />
                 </button>
-                {openItem === index + 9 && (
-                  <div className="px-6 pb-6" data-testid={`faq-answer-${index + 10}`}>
+                {openItem === index + 8 && (
+                  <div className="px-6 pb-6" data-testid={`faq-answer-${index + 9}`}>
                     <p className="text-muted leading-relaxed">
                       {faq.answer}
                     </p>
