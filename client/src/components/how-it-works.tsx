@@ -34,21 +34,6 @@ export default function HowItWorks() {
       description: "Follow bilateral stimulation while noticing what comes up, reducing distress over time."
     },
     {
-      icon: RotateCcw,
-      title: "Reprocessing Continued",
-      description: "Continue processing with guidance until the memory feels less disturbing."
-    },
-    {
-      icon: Sparkles,
-      title: "Installation of Positive Belief",
-      description: "Strengthen the positive belief you want to hold about yourself."
-    },
-    {
-      icon: ShieldCheck,
-      title: "Installation Continued",
-      description: "Reinforce the belief with further bilateral stimulation until it feels fully true."
-    },
-    {
       icon: Activity,
       title: "Body Scan",
       description: "Check your body for any tension or disturbance; process anything remaining."
@@ -76,9 +61,9 @@ export default function HowItWorks() {
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-5xl mx-auto">
-          {/* First block of 5 cards */}
+          {/* First block of 4 cards */}
           <div className="space-y-6">
-            {steps.slice(0, 5).map((step, index) => {
+            {steps.slice(0, 4).map((step, index) => {
               const IconComponent = step.icon;
               return (
                 <div key={index} className="bg-white dark:bg-surface p-6 rounded-custom shadow-card border border-custom text-center" data-testid={`step-${index + 1}`}>
@@ -94,12 +79,12 @@ export default function HowItWorks() {
             })}
           </div>
           
-          {/* Second block of 5 cards */}
+          {/* Second block of 3 cards */}
           <div className="space-y-6">
-            {steps.slice(5, 10).map((step, index) => {
+            {steps.slice(4, 7).map((step, index) => {
               const IconComponent = step.icon;
               return (
-                <div key={index + 5} className="bg-white dark:bg-surface p-6 rounded-custom shadow-card border border-custom text-center" data-testid={`step-${index + 6}`}>
+                <div key={index + 4} className="bg-white dark:bg-surface p-6 rounded-custom shadow-card border border-custom text-center" data-testid={`step-${index + 5}`}>
                   <div className="w-16 h-16 bg-gradient-to-br from-primary-blue to-primary-green rounded-custom mx-auto mb-4 flex items-center justify-center">
                     <IconComponent className="w-8 h-8 text-white" aria-hidden="true" />
                   </div>
