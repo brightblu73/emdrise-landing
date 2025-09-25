@@ -9,16 +9,16 @@ export default function Privacy() {
         <div className="max-w-4xl mx-auto px-6">
           <div className="prose prose-lg max-w-none">
             <h1 className="text-4xl font-bold text-primary mb-4">Privacy Policy</h1>
-            <h2 className="text-xl text-muted mb-8">Last updated: 6 September 2025</h2>
+            <h2 className="text-xl text-muted mb-8">Last updated: 22 September 2025</h2>
             
             <h3 className="text-2xl font-semibold text-primary mt-8 mb-4">1. Introduction</h3>
             <p className="text-muted leading-relaxed mb-4">
-              This Privacy Policy explains how GC Psychotherapy (we, us, our) collects, uses, shares and protects personal information when you use the EMDRise mobile and web application, our websites and related services. Protecting your privacy is important to us, and we comply with applicable data protection laws, including the UK General Data Protection Regulation (UK GDPR) and the Data Protection Act 2018. By using our services, you agree to the collection and use of information in accordance with this policy.
+              This Privacy Policy explains how EMDRISE Ltd (we, us, our) collects, uses, shares and protects personal information when you use the EMDRise mobile and web application, our websites and related services. Protecting your privacy is important to us, and we comply with applicable data protection laws, including the UK General Data Protection Regulation (UK GDPR) and the Data Protection Act 2018. By using our services, you agree to the collection and use of information in accordance with this policy.
             </p>
 
             <h3 className="text-2xl font-semibold text-primary mt-8 mb-4">2. Who We Are & Scope</h3>
             <p className="text-muted leading-relaxed mb-4">
-              EMDRise is owned and operated by GC Psychotherapy, a company based in the United Kingdom. This policy applies to information we process through our mobile application, web platform, and related services. It does not apply to third‑party websites, services, or applications, even if accessible through our services.
+              EMDRise is owned and operated by EMDRISE Ltd, a private limited company incorporated in England and Wales with company registration number 16733416 and registered office at 20 Wenlock Road, London N1 7GU.
             </p>
 
             <h3 className="text-2xl font-semibold text-primary mt-8 mb-4">3. Information We Collect</h3>
@@ -68,12 +68,12 @@ export default function Privacy() {
 
             <h3 className="text-2xl font-semibold text-primary mt-8 mb-4">11. Your Rights</h3>
             <p className="text-muted leading-relaxed mb-4">
-              You have certain rights under data protection laws, including the right to access, correct, or delete your personal data, object to or restrict processing, and request data portability. You may also withdraw consent for marketing communications at any time. To exercise your rights, please contact us at <a href="mailto:support@emdrise.com" className="text-primary hover:opacity-80">support@emdrise.com</a>. If you reside in the UK or EU, you also have the right to lodge a complaint with the Information Commissioner's Office or your local data protection authority.
+              You have certain rights under data protection laws, including the right to access, correct, or delete your personal data, object to or restrict processing, and request data portability. You may also withdraw consent for marketing communications at any time. To exercise your rights, please contact us at <a href="mailto:support@emdrise.com" className="text-primary hover:opacity-80">support@emdrise.com</a>. If you reside in the UK or EU, you also have the right to lodge a complaint with the Information Commissioner's Office (ICO) or your local supervisory authority.
             </p>
 
             <h3 className="text-2xl font-semibold text-primary mt-8 mb-4">12. Children's Privacy</h3>
             <p className="text-muted leading-relaxed mb-4">
-              EMDRise is intended for adults. We do not knowingly collect personal data from children under 16. If we become aware that a child has provided us with personal information, we will take steps to delete such information.
+              EMDRise is intended for adults aged 18 and over. We do not knowingly allow use or collect data from users under the age of 16. If we become aware that a child has provided us with personal information, we will take steps to delete such information.
             </p>
 
             <h3 className="text-2xl font-semibold text-primary mt-8 mb-4">13. Security Measures</h3>
