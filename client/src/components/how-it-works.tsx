@@ -75,21 +75,42 @@ export default function HowItWorks() {
           </p>
         </div>
         
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-4xl mx-auto">
-          {steps.map((step, index) => {
-            const IconComponent = step.icon;
-            return (
-              <div key={index} className="bg-white dark:bg-surface p-6 rounded-custom shadow-card border border-custom text-center" data-testid={`step-${index + 1}`}>
-                <div className="w-16 h-16 bg-gradient-to-br from-primary-blue to-primary-green rounded-custom mx-auto mb-4 flex items-center justify-center">
-                  <IconComponent className="w-8 h-8 text-white" aria-hidden="true" />
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-5xl mx-auto">
+          {/* First block of 5 cards */}
+          <div className="space-y-6">
+            {steps.slice(0, 5).map((step, index) => {
+              const IconComponent = step.icon;
+              return (
+                <div key={index} className="bg-white dark:bg-surface p-6 rounded-custom shadow-card border border-custom text-center" data-testid={`step-${index + 1}`}>
+                  <div className="w-16 h-16 bg-gradient-to-br from-primary-blue to-primary-green rounded-custom mx-auto mb-4 flex items-center justify-center">
+                    <IconComponent className="w-8 h-8 text-white" aria-hidden="true" />
+                  </div>
+                  <h3 className="text-xl font-semibold text-primary mb-3">{step.title}</h3>
+                  <p className="text-muted leading-relaxed text-sm">
+                    {step.description}
+                  </p>
                 </div>
-                <h3 className="text-xl font-semibold text-primary mb-3">{step.title}</h3>
-                <p className="text-muted leading-relaxed text-sm">
-                  {step.description}
-                </p>
-              </div>
-            );
-          })}
+              );
+            })}
+          </div>
+          
+          {/* Second block of 5 cards */}
+          <div className="space-y-6">
+            {steps.slice(5, 10).map((step, index) => {
+              const IconComponent = step.icon;
+              return (
+                <div key={index + 5} className="bg-white dark:bg-surface p-6 rounded-custom shadow-card border border-custom text-center" data-testid={`step-${index + 6}`}>
+                  <div className="w-16 h-16 bg-gradient-to-br from-primary-blue to-primary-green rounded-custom mx-auto mb-4 flex items-center justify-center">
+                    <IconComponent className="w-8 h-8 text-white" aria-hidden="true" />
+                  </div>
+                  <h3 className="text-xl font-semibold text-primary mb-3">{step.title}</h3>
+                  <p className="text-muted leading-relaxed text-sm">
+                    {step.description}
+                  </p>
+                </div>
+              );
+            })}
+          </div>
         </div>
       </div>
     </section>
