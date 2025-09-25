@@ -71,7 +71,7 @@ export default function HowItWorks() {
         <div className="text-center mb-16">
           <h2 className="text-4xl lg:text-5xl font-bold text-primary mb-6">How EMDRise Works</h2>
           <p className="text-xl text-muted max-w-3xl mx-auto leading-relaxed">
-            Our evidence-based approach guides you through structured EMDR therapy sessions designed by licensed professionals.
+            Built on the evidence-based eight-phase EMDR model, EMDRise provides step-by-step guidance for self-directed sessions.
           </p>
         </div>
         
