@@ -85,58 +85,29 @@ export default function FAQ() {
           </p>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto items-start">
-          {/* First block of 8 FAQs */}
-          <div className="space-y-4 flex flex-col">
-            {faqs.slice(0, 8).map((faq, index) => (
-              <div key={index} className="card-custom" data-testid={`faq-item-${index + 1}`}>
-                <button 
-                  className="w-full p-6 text-left flex items-center justify-between focus-visible"
-                  onClick={() => toggleItem(index)}
-                  data-testid={`faq-button-${index + 1}`}
-                >
-                  <h3 className="text-xl font-semibold text-primary pr-4">{faq.question}</h3>
-                  <Plus 
-                    className={`text-2xl text-muted transition-transform ${openItem === index ? 'rotate-45' : ''}`}
-                    size={24}
-                  />
-                </button>
-                {openItem === index && (
-                  <div className="px-6 pb-6" data-testid={`faq-answer-${index + 1}`}>
-                    <p className="text-muted leading-relaxed">
-                      {faq.answer}
-                    </p>
-                  </div>
-                )}
-              </div>
-            ))}
-          </div>
-          
-          {/* Second block of 8 FAQs */}
-          <div className="space-y-4 flex flex-col">
-            {faqs.slice(8, 16).map((faq, index) => (
-              <div key={index + 8} className="card-custom" data-testid={`faq-item-${index + 9}`}>
-                <button 
-                  className="w-full p-6 text-left flex items-center justify-between focus-visible"
-                  onClick={() => toggleItem(index + 8)}
-                  data-testid={`faq-button-${index + 9}`}
-                >
-                  <h3 className="text-xl font-semibold text-primary pr-4">{faq.question}</h3>
-                  <Plus 
-                    className={`text-2xl text-muted transition-transform ${openItem === index + 8 ? 'rotate-45' : ''}`}
-                    size={24}
-                  />
-                </button>
-                {openItem === index + 8 && (
-                  <div className="px-6 pb-6" data-testid={`faq-answer-${index + 9}`}>
-                    <p className="text-muted leading-relaxed">
-                      {faq.answer}
-                    </p>
-                  </div>
-                )}
-              </div>
-            ))}
-          </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-4 max-w-6xl mx-auto">
+          {faqs.map((faq, index) => (
+            <div key={index} className="card-custom" data-testid={`faq-item-${index + 1}`}>
+              <button 
+                className="w-full p-6 text-left flex items-center justify-between focus-visible"
+                onClick={() => toggleItem(index)}
+                data-testid={`faq-button-${index + 1}`}
+              >
+                <h3 className="text-xl font-semibold text-primary pr-4">{faq.question}</h3>
+                <Plus 
+                  className={`text-2xl text-muted transition-transform ${openItem === index ? 'rotate-45' : ''}`}
+                  size={24}
+                />
+              </button>
+              {openItem === index && (
+                <div className="px-6 pb-6" data-testid={`faq-answer-${index + 1}`}>
+                  <p className="text-muted leading-relaxed">
+                    {faq.answer}
+                  </p>
+                </div>
+              )}
+            </div>
+          ))}
         </div>
       </div>
     </section>
