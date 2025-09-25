@@ -1,22 +1,67 @@
+import { 
+  Sunrise, 
+  Home, 
+  Target, 
+  Waves, 
+  RotateCcw, 
+  Sparkles, 
+  ShieldCheck, 
+  Activity, 
+  Flower2, 
+  Lightbulb 
+} from "lucide-react";
+
 export default function HowItWorks() {
   const steps = [
     {
-      number: "1",
-      title: "Assessment",
-      description: "Complete a comprehensive intake assessment to personalize your therapy experience and identify target memories.",
-      gradient: "from-primary-blue to-secondary-blue"
+      icon: Sunrise,
+      title: "Welcome & Introduction",
+      description: "Meet your guide and learn how EMDR helps the brain process stuck memories."
     },
     {
-      number: "2", 
-      title: "Guided Sessions",
-      description: "Follow structured EMDR protocols with bilateral stimulation, guided imagery, and therapeutic techniques.",
-      gradient: "from-secondary-blue to-primary-green"
+      icon: Home,
+      title: "Calm Place",
+      description: "Create a personal safe space you can return to at any time during your journey."
     },
     {
-      number: "3",
-      title: "Progress Tracking", 
-      description: "Monitor your healing journey with detailed progress reports and adaptive treatment recommendations.",
-      gradient: "from-primary-green to-accent-orange"
+      icon: Target,
+      title: "Target Memory Setup",
+      description: "Select a memory, identify negative and positive beliefs, and rate your feelings (SUDS & VOC)."
+    },
+    {
+      icon: Waves,
+      title: "Desensitisation",
+      description: "Follow bilateral stimulation while noticing what comes up, reducing distress over time."
+    },
+    {
+      icon: RotateCcw,
+      title: "Reprocessing Continued",
+      description: "Continue processing with guidance until the memory feels less disturbing."
+    },
+    {
+      icon: Sparkles,
+      title: "Installation of Positive Belief",
+      description: "Strengthen the positive belief you want to hold about yourself."
+    },
+    {
+      icon: ShieldCheck,
+      title: "Installation Continued",
+      description: "Reinforce the belief with further bilateral stimulation until it feels fully true."
+    },
+    {
+      icon: Activity,
+      title: "Body Scan",
+      description: "Check your body for any tension or disturbance; process anything remaining."
+    },
+    {
+      icon: Flower2,
+      title: "Calm Place",
+      description: "Return to your safe space to ground and close the session."
+    },
+    {
+      icon: Lightbulb,
+      title: "Aftercare",
+      description: "Learn how to look after yourself and integrate the work between sessions."
     }
   ];
 
@@ -30,18 +75,21 @@ export default function HowItWorks() {
           </p>
         </div>
         
-        <div className="grid md:grid-cols-3 gap-12">
-          {steps.map((step, index) => (
-            <div key={index} className="text-center" data-testid={`step-${step.number}`}>
-              <div className={`w-20 h-20 bg-gradient-to-br ${step.gradient} rounded-custom mx-auto mb-6 flex items-center justify-center`}>
-                <span className="text-white text-2xl font-bold">{step.number}</span>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-4xl mx-auto">
+          {steps.map((step, index) => {
+            const IconComponent = step.icon;
+            return (
+              <div key={index} className="bg-white dark:bg-surface p-6 rounded-custom shadow-card border border-custom text-center" data-testid={`step-${index + 1}`}>
+                <div className="w-16 h-16 bg-gradient-to-br from-primary-blue to-primary-green rounded-custom mx-auto mb-4 flex items-center justify-center">
+                  <IconComponent className="w-8 h-8 text-white" aria-hidden="true" />
+                </div>
+                <h3 className="text-xl font-semibold text-primary mb-3">{step.title}</h3>
+                <p className="text-muted leading-relaxed text-sm">
+                  {step.description}
+                </p>
               </div>
-              <h3 className="text-2xl font-semibold text-primary mb-4">{step.title}</h3>
-              <p className="text-muted leading-relaxed">
-                {step.description}
-              </p>
-            </div>
-          ))}
+            );
+          })}
         </div>
       </div>
     </section>
