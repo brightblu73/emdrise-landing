@@ -34,6 +34,11 @@ export default function HowItWorks() {
       description: "Follow bilateral stimulation while noticing what comes up, reducing distress over time."
     },
     {
+      icon: Sparkles,
+      title: "Installation of Positive Belief",
+      description: "Strengthen the positive belief you want to hold about yourself."
+    },
+    {
       icon: Activity,
       title: "Body Scan",
       description: "Check your body for any tension or disturbance; process anything remaining."
@@ -79,9 +84,9 @@ export default function HowItWorks() {
             })}
           </div>
           
-          {/* Second block of 3 cards */}
+          {/* Second block of 4 cards */}
           <div className="space-y-6">
-            {steps.slice(4, 7).map((step, index) => {
+            {steps.slice(4, 8).map((step, index) => {
               const IconComponent = step.icon;
               return (
                 <div key={index + 4} className="bg-white dark:bg-surface p-6 rounded-custom shadow-card border border-custom text-center" data-testid={`step-${index + 5}`}>
