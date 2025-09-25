@@ -75,7 +75,7 @@ export default function HowItWorks() {
           </p>
         </div>
         
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-5xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-5xl mx-auto">
           {/* First block of 5 cards */}
           <div className="space-y-6">
             {steps.slice(0, 5).map((step, index) => {
