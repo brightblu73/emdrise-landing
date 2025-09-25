@@ -58,10 +58,6 @@ export default function FAQ() {
       answer: "Visual: moving dots across the screen, Auditory: alternating stereo tones, Tactile: self-tapping prompts."
     },
     {
-      question: "What are SUDS and VOC ratings?",
-      answer: "SUDS (Subjective Units of Distress Scale) lets you rate your distress during reprocessing (0 = no distress, 10 = highest). VOC (Validity of Cognition) helps you rate how true your positive belief feels (1 = completely false, 7 = completely true)."
-    },
-    {
       question: "How is my data protected?",
       answer: "EMDRise is fully GDPR and UK Data Protection Act compliant. All user data is encrypted in transit and at rest, and stored securely on trusted platforms. The app follows strict data minimisation principles, collecting only what is necessary to provide safe and effective self-help and therapy support."
     },
@@ -97,29 +93,58 @@ export default function FAQ() {
           </p>
         </div>
         
-        <div className="space-y-4">
-          {faqs.map((faq, index) => (
-            <div key={index} className="card-custom" data-testid={`faq-item-${index + 1}`}>
-              <button 
-                className="w-full p-6 text-left flex items-center justify-between focus-visible"
-                onClick={() => toggleItem(index)}
-                data-testid={`faq-button-${index + 1}`}
-              >
-                <h3 className="text-xl font-semibold text-primary pr-4">{faq.question}</h3>
-                <Plus 
-                  className={`text-2xl text-muted transition-transform ${openItem === index ? 'rotate-45' : ''}`}
-                  size={24}
-                />
-              </button>
-              {openItem === index && (
-                <div className="px-6 pb-6" data-testid={`faq-answer-${index + 1}`}>
-                  <p className="text-muted leading-relaxed">
-                    {faq.answer}
-                  </p>
-                </div>
-              )}
-            </div>
-          ))}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+          {/* First block of 9 FAQs */}
+          <div className="space-y-4">
+            {faqs.slice(0, 9).map((faq, index) => (
+              <div key={index} className="card-custom" data-testid={`faq-item-${index + 1}`}>
+                <button 
+                  className="w-full p-6 text-left flex items-center justify-between focus-visible"
+                  onClick={() => toggleItem(index)}
+                  data-testid={`faq-button-${index + 1}`}
+                >
+                  <h3 className="text-xl font-semibold text-primary pr-4">{faq.question}</h3>
+                  <Plus 
+                    className={`text-2xl text-muted transition-transform ${openItem === index ? 'rotate-45' : ''}`}
+                    size={24}
+                  />
+                </button>
+                {openItem === index && (
+                  <div className="px-6 pb-6" data-testid={`faq-answer-${index + 1}`}>
+                    <p className="text-muted leading-relaxed">
+                      {faq.answer}
+                    </p>
+                  </div>
+                )}
+              </div>
+            ))}
+          </div>
+          
+          {/* Second block of 8 FAQs */}
+          <div className="space-y-4">
+            {faqs.slice(9, 17).map((faq, index) => (
+              <div key={index + 9} className="card-custom" data-testid={`faq-item-${index + 10}`}>
+                <button 
+                  className="w-full p-6 text-left flex items-center justify-between focus-visible"
+                  onClick={() => toggleItem(index + 9)}
+                  data-testid={`faq-button-${index + 10}`}
+                >
+                  <h3 className="text-xl font-semibold text-primary pr-4">{faq.question}</h3>
+                  <Plus 
+                    className={`text-2xl text-muted transition-transform ${openItem === index + 9 ? 'rotate-45' : ''}`}
+                    size={24}
+                  />
+                </button>
+                {openItem === index + 9 && (
+                  <div className="px-6 pb-6" data-testid={`faq-answer-${index + 10}`}>
+                    <p className="text-muted leading-relaxed">
+                      {faq.answer}
+                    </p>
+                  </div>
+                )}
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </section>
