@@ -85,9 +85,9 @@ export default function FAQ() {
           </p>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto items-start">
           {/* First block of 8 FAQs */}
-          <div className="space-y-4">
+          <div className="space-y-4 flex flex-col">
             {faqs.slice(0, 8).map((faq, index) => (
               <div key={index} className="card-custom" data-testid={`faq-item-${index + 1}`}>
                 <button 
@@ -113,7 +113,7 @@ export default function FAQ() {
           </div>
           
           {/* Second block of 8 FAQs */}
-          <div className="space-y-4">
+          <div className="space-y-4 flex flex-col">
             {faqs.slice(8, 16).map((faq, index) => (
               <div key={index + 8} className="card-custom" data-testid={`faq-item-${index + 9}`}>
                 <button 
