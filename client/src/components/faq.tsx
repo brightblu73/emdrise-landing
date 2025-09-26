@@ -89,7 +89,7 @@ export default function FAQ() {
           {faqs.map((faq, index) => (
             <div key={index} className="card-custom" data-testid={`faq-item-${index + 1}`}>
               <button 
-                className="w-full p-6 text-left flex items-center justify-between focus-visible"
+                className="w-full text-left flex items-center justify-between focus-visible"
                 onClick={() => toggleItem(index)}
                 data-testid={`faq-button-${index + 1}`}
               >
@@ -100,7 +100,7 @@ export default function FAQ() {
                 />
               </button>
               {openItem === index && (
-                <div className="px-6 pb-6" data-testid={`faq-answer-${index + 1}`}>
+                <div className="pt-4 border-t border-custom mt-4" data-testid={`faq-answer-${index + 1}`}>
                   <p className="text-muted leading-relaxed">
                     {faq.answer}
                   </p>

@@ -4,38 +4,39 @@
 @tailwind utilities;
 
 :root {
-  --background: hsl(244 6% 97%);
-  --foreground: hsl(213 27% 11%);
-  --card: hsl(0 0% 100%);
-  --card-foreground: hsl(213 27% 11%);
-  --popover: hsl(0 0% 100%);
-  --popover-foreground: hsl(213 27% 11%);
-  --primary: hsl(212 97% 55%);
-  --primary-foreground: hsl(0 0% 100%);
-  --secondary: hsl(210 40% 98%);
-  --secondary-foreground: hsl(213 27% 11%);
-  --muted: hsl(210 8% 90%);
-  --muted-foreground: hsl(215 16% 47%);
-  --accent: hsl(45 93% 56%);
-  --accent-foreground: hsl(213 27% 11%);
-  --destructive: hsl(0 84% 60%);
-  --destructive-foreground: hsl(0 0% 100%);
-  --border: hsl(214 32% 91%);
-  --input: hsl(214 32% 91%);
-  --ring: hsl(212 97% 55%);
-  --chart-1: hsl(212 97% 55%);
-  --chart-2: hsl(158 100% 33%);
-  --chart-3: hsl(45 93% 56%);
-  --chart-4: hsl(147 78% 42%);
-  --chart-5: hsl(341 75% 51%);
-  --sidebar: hsl(0 0% 100%);
-  --sidebar-foreground: hsl(213 27% 11%);
-  --sidebar-primary: hsl(212 97% 55%);
-  --sidebar-primary-foreground: hsl(0 0% 100%);
-  --sidebar-accent: hsl(210 40% 98%);
-  --sidebar-accent-foreground: hsl(213 27% 11%);
-  --sidebar-border: hsl(214 32% 91%);
-  --sidebar-ring: hsl(212 97% 55%);
+  /* EMDRise brand colors applied to Tailwind/shadcn system */
+  --background: hsl(210, 40%, 98%);           /* therapeutic-bg */
+  --foreground: hsl(222, 47%, 11%);           /* EMDRise foreground */
+  --card: hsl(210, 35%, 97%);                 /* card-bg per guidelines */
+  --card-foreground: hsl(222, 47%, 11%);      /* EMDRise foreground */
+  --popover: hsl(210, 35%, 97%);              /* card-bg per guidelines */
+  --popover-foreground: hsl(222, 47%, 11%);   /* EMDRise foreground */
+  --primary: hsl(217, 88%, 58%);              /* EMDRise primary-blue */
+  --primary-foreground: hsl(0, 0%, 100%);     /* white */
+  --secondary: hsl(210, 40%, 98%);            /* therapeutic-bg */
+  --secondary-foreground: hsl(222, 47%, 11%); /* EMDRise foreground */
+  --muted: hsl(210, 30%, 96%);                /* EMDRise muted-text */
+  --muted-foreground: hsl(215, 16%, 47%);     /* keep original for contrast */
+  --accent: hsl(41, 96%, 48%);                /* EMDRise warm-accent */
+  --accent-foreground: hsl(222, 47%, 11%);    /* EMDRise foreground */
+  --destructive: hsl(0, 84%, 60%);            /* keep original for alerts */
+  --destructive-foreground: hsl(0, 0%, 100%); /* white */
+  --border: hsl(214, 32%, 91%);               /* EMDRise border-custom */
+  --input: hsl(214, 32%, 91%);                /* EMDRise border-custom */
+  --ring: hsl(217, 88%, 58%);                 /* EMDRise primary-blue */
+  --chart-1: hsl(217, 88%, 58%);              /* EMDRise primary-blue */
+  --chart-2: hsl(158, 92%, 40%);              /* EMDRise primary-green */
+  --chart-3: hsl(41, 96%, 48%);               /* EMDRise warm-accent */
+  --chart-4: hsl(212, 92%, 66%);              /* EMDRise secondary-blue */
+  --chart-5: hsl(162, 83%, 58%);              /* EMDRise secondary-green */
+  --sidebar: hsl(210, 35%, 97%);              /* card-bg per guidelines */
+  --sidebar-foreground: hsl(222, 47%, 11%);   /* EMDRise foreground */
+  --sidebar-primary: hsl(217, 88%, 58%);      /* EMDRise primary-blue */
+  --sidebar-primary-foreground: hsl(0, 0%, 100%); /* white */
+  --sidebar-accent: hsl(210, 40%, 98%);       /* therapeutic-bg */
+  --sidebar-accent-foreground: hsl(222, 47%, 11%); /* EMDRise foreground */
+  --sidebar-border: hsl(214, 32%, 91%);       /* EMDRise border-custom */
+  --sidebar-ring: hsl(217, 88%, 58%);         /* EMDRise primary-blue */
   --font-sans: 'Inter', system-ui, sans-serif;
   --font-serif: Georgia, serif;
   --font-mono: Menlo, monospace;
@@ -64,33 +65,34 @@
 }
 
 .dark {
-  --background: hsl(0 0% 0%);
-  --foreground: hsl(200 7% 91%);
-  --card: hsl(228 10% 10%);
-  --card-foreground: hsl(0 0% 85%);
-  --popover: hsl(0 0% 0%);
-  --popover-foreground: hsl(200 7% 91%);
-  --primary: hsl(212 97% 55%);
-  --primary-foreground: hsl(0 0% 100%);
-  --secondary: hsl(195 15% 95%);
-  --secondary-foreground: hsl(213 27% 11%);
-  --muted: hsl(0 0% 9%);
-  --muted-foreground: hsl(210 3% 46%);
-  --accent: hsl(206 70% 8%);
-  --accent-foreground: hsl(212 97% 55%);
-  --destructive: hsl(0 84% 60%);
-  --destructive-foreground: hsl(0 0% 100%);
-  --border: hsl(210 5% 15%);
-  --input: hsl(208 28% 18%);
-  --ring: hsl(212 97% 55%);
-  --sidebar: hsl(228 10% 10%);
-  --sidebar-foreground: hsl(0 0% 85%);
-  --sidebar-primary: hsl(212 97% 55%);
-  --sidebar-primary-foreground: hsl(0 0% 100%);
-  --sidebar-accent: hsl(206 70% 8%);
-  --sidebar-accent-foreground: hsl(212 97% 55%);
-  --sidebar-border: hsl(206 16% 26%);
-  --sidebar-ring: hsl(212 97% 55%);
+  /* EMDRise dark mode - maintains brand colors with dark contrast */
+  --background: hsl(222, 47%, 8%);           /* dark version of foreground */
+  --foreground: hsl(210, 40%, 98%);          /* therapeutic-bg for contrast */
+  --card: hsl(222, 47%, 11%);               /* EMDRise foreground darkened */
+  --card-foreground: hsl(210, 40%, 98%);    /* therapeutic-bg for contrast */
+  --popover: hsl(222, 47%, 8%);             /* dark background */
+  --popover-foreground: hsl(210, 40%, 98%); /* therapeutic-bg for contrast */
+  --primary: hsl(217, 88%, 58%);            /* EMDRise primary-blue unchanged */
+  --primary-foreground: hsl(0, 0%, 100%);   /* white */
+  --secondary: hsl(222, 47%, 15%);          /* slightly lighter dark */
+  --secondary-foreground: hsl(210, 40%, 98%); /* therapeutic-bg for contrast */
+  --muted: hsl(222, 47%, 20%);              /* muted dark background */
+  --muted-foreground: hsl(210, 30%, 70%);   /* lighter muted text */
+  --accent: hsl(41, 96%, 48%);              /* EMDRise warm-accent unchanged */
+  --accent-foreground: hsl(222, 47%, 11%);  /* dark foreground */
+  --destructive: hsl(0, 84%, 60%);          /* keep original for alerts */
+  --destructive-foreground: hsl(0, 0%, 100%); /* white */
+  --border: hsl(222, 47%, 25%);             /* darker border */
+  --input: hsl(222, 47%, 20%);              /* dark input background */
+  --ring: hsl(217, 88%, 58%);               /* EMDRise primary-blue */
+  --sidebar: hsl(222, 47%, 11%);            /* dark sidebar */
+  --sidebar-foreground: hsl(210, 40%, 98%); /* light foreground */
+  --sidebar-primary: hsl(217, 88%, 58%);    /* EMDRise primary-blue */
+  --sidebar-primary-foreground: hsl(0, 0%, 100%); /* white */
+  --sidebar-accent: hsl(222, 47%, 15%);     /* slightly lighter dark */
+  --sidebar-accent-foreground: hsl(210, 40%, 98%); /* light foreground */
+  --sidebar-border: hsl(222, 47%, 25%);     /* darker border */
+  --sidebar-ring: hsl(217, 88%, 58%);       /* EMDRise primary-blue */
 }
 
 @layer base {
@@ -157,10 +159,11 @@
   }
 
   .card-custom {
-    background-color: var(--surface);
+    background-color: var(--card);
     border: 1px solid var(--border);
-    border-radius: var(--radius);
+    border-radius: var(--radius-custom);
     padding: 24px;
+    box-shadow: 0 1px 3px rgba(30, 144, 255, 0.1);
   }
 
   @media (max-width: 768px) {
@@ -173,11 +176,11 @@
   .header-blur {
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
-    background-color: rgba(255, 255, 255, 0.95);
+    background-color: hsla(210, 40%, 98%, 0.95);
   }
 
   .footer-soft {
-    background-color: var(--card-bg);
+    background-color: var(--card);
   }
 
   .footer-link {
@@ -192,7 +195,7 @@
   .ticker-container {
     overflow: hidden;
     position: relative;
-    background-color: white;
+    background-color: var(--card);
   }
 
   .ticker-track {
@@ -280,7 +283,7 @@
   }
 
   .bg-surface {
-    background-color: white;
+    background-color: var(--card);
   }
 
   .bg-light {

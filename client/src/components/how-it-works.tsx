@@ -71,8 +71,8 @@ export default function HowItWorks() {
             {steps.slice(0, 4).map((step, index) => {
               const IconComponent = step.icon;
               return (
-                <div key={index} className="bg-white dark:bg-surface p-6 rounded-custom shadow-card border border-custom text-center" data-testid={`step-${index + 1}`}>
-                  <div className="w-16 h-16 bg-gradient-to-br from-primary-blue to-primary-green rounded-custom mx-auto mb-4 flex items-center justify-center">
+                <div key={index} className="card-custom text-center" data-testid={`step-${index + 1}`}>
+                  <div className="w-16 h-16 rounded-custom mx-auto mb-4 flex items-center justify-center bg-gradient-to-br from-primary-blue to-primary-green">
                     <IconComponent className="w-8 h-8 text-white" aria-hidden="true" />
                   </div>
                   <h3 className="text-xl font-semibold text-primary mb-3">{step.title}</h3>
@@ -89,8 +89,8 @@ export default function HowItWorks() {
             {steps.slice(4, 8).map((step, index) => {
               const IconComponent = step.icon;
               return (
-                <div key={index + 4} className="bg-white dark:bg-surface p-6 rounded-custom shadow-card border border-custom text-center" data-testid={`step-${index + 5}`}>
-                  <div className="w-16 h-16 bg-gradient-to-br from-primary-blue to-primary-green rounded-custom mx-auto mb-4 flex items-center justify-center">
+                <div key={index + 4} className="card-custom text-center" data-testid={`step-${index + 5}`}>
+                  <div className="w-16 h-16 rounded-custom mx-auto mb-4 flex items-center justify-center bg-gradient-to-br from-primary-blue to-primary-green">
                     <IconComponent className="w-8 h-8 text-white" aria-hidden="true" />
                   </div>
                   <h3 className="text-xl font-semibold text-primary mb-3">{step.title}</h3>
