@@ -21,7 +21,7 @@ export default function Footer() {
             />
           </div>
           <p className="text-white/80 leading-relaxed mb-6 max-w-md">
-            Professional Self-Directed EMDR therapy accessible to everyone that follows the evidence based treatment for trauma and PTSD.
+            Self-directed EMDR therapy, professionally designed and available on demand
           </p>
         </div>
         
