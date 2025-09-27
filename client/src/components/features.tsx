@@ -24,7 +24,7 @@ export default function Features() {
             {/* First column - first 5 reasons */}
             <div className="space-y-6">
               {reasons.slice(0, 5).map((reason, index) => (
-                <div key={index} className="flex items-start space-x-4 p-6 card-custom hover:shadow-lg transition-all duration-200" data-testid={`reason-${index + 1}`}>
+                <div key={index} className="flex items-start space-x-4 p-6 card-custom hover:shadow-lg transition-all duration-200 h-32" data-testid={`reason-${index + 1}`}>
                   <div className="w-3 h-3 bg-gradient-to-br from-blue-500 to-emerald-500 rounded-full flex-shrink-0 mt-2"></div>
                   <p className="text-lg text-muted leading-relaxed">{reason}</p>
                 </div>
@@ -34,7 +34,7 @@ export default function Features() {
             {/* Second column - last 5 reasons */}
             <div className="space-y-6">
               {reasons.slice(5, 10).map((reason, index) => (
-                <div key={index + 5} className="flex items-start space-x-4 p-6 card-custom hover:shadow-lg transition-all duration-200" data-testid={`reason-${index + 6}`}>
+                <div key={index + 5} className="flex items-start space-x-4 p-6 card-custom hover:shadow-lg transition-all duration-200 h-32" data-testid={`reason-${index + 6}`}>
                   <div className="w-3 h-3 bg-gradient-to-br from-blue-500 to-emerald-500 rounded-full flex-shrink-0 mt-2"></div>
                   <p className="text-lg text-muted leading-relaxed">{reason}</p>
                 </div>
