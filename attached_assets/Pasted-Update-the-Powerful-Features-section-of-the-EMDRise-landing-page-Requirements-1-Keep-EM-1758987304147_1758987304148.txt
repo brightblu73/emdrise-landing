@@ -1,0 +1,28 @@
+Update the "Powerful Features" section of the EMDRise landing page.  
+
+Requirements:  
+1. Keep EMDRise branding consistent with the existing site design (logo, colours, typography, icon style).  
+2. Only update the "Powerful Features" section — do not change any other parts of the site.  
+3. Present the features in a clean two-column grid layout with icons and short descriptive text, styled the same as the current features grid.  
+4. Replace the existing items with the following list:
+
+- Choice of Therapist Guide: Select a male or female virtual therapist to guide you through each stage.  
+- Therapist-Written Video Introductions: Each stage begins with a short video written by qualified EMDR therapists, preparing you for the process.  
+- Flexible Bilateral Stimulation: Choose from visual tracking, alternating audio tones, or gentle tapping — whatever suits you best.  
+- Pause and Resume Anytime: If you need a break, pause your session and return later without losing progress.  
+- Calm Place & After-Care: Includes built-in support for safe closure and grounding, so you finish each session feeling settled.  
+- Memory Clear Dashboard: Track how many memories you’ve successfully cleared as you progress through your journey.  
+- Progress Analytics: Simple tracking tools help you reflect on your journey. SUDS and VOC scores are provided for your own reference, but only you record and monitor them.  
+- Privacy First: End-to-end encryption ensures your sessions remain completely confidential.  
+
+5. Remove any mention of offline access.  
+
+6. After the features grid, add a short “Why EMDRise?” banner with bullet points:  
+- Guided by therapist-written content  
+- Virtual guide takes you step by step through the EMDR journey  
+- No waitlists — sign up and start your EMDR journey immediately  
+- Designed for flexibility and safety  
+- Built around privacy and control  
+- Accessible anytime, anywhere  
+
+Make sure the styling, spacing, and hover effects match the existing "Powerful Features" section exactly.  
