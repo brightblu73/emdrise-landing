@@ -9,7 +9,7 @@ export default function Footer() {
   }, []);
 
   return (
-    <footer className="py-16 footer-soft bg-gradient-to-br from-primary-blue/90 to-primary-green/90">
+    <footer className="py-16 bg-gradient-to-br from-blue-700 to-emerald-700">
       <div className="max-w-container mx-auto px-6">
         <div className="grid md:grid-cols-4 gap-12">
           <div className="md:col-span-2">

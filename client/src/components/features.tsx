@@ -39,7 +39,7 @@ export default function Features() {
   ];
 
   return (
-    <section id="features" className="py-20 fade-in-section bg-gradient-to-b from-primary-blue/5 to-primary-green/5">
+    <section id="features" className="py-20 fade-in-section bg-gradient-to-b from-blue-50 to-emerald-50">
       <div className="max-w-container mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-4xl lg:text-5xl font-bold text-primary mb-6">Powerful Features</h2>
@@ -51,7 +51,7 @@ export default function Features() {
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {features.map((feature, index) => (
             <div key={index} className="card-custom p-8 hover:shadow-lg transition-shadow" data-testid={`feature-${index + 1}`}>
-              <div className="w-16 h-16 bg-gradient-to-br from-primary-blue to-primary-green rounded-custom mb-6 flex items-center justify-center">
+              <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-emerald-500 rounded-custom mb-6 flex items-center justify-center">
                 <span className="text-white text-2xl">{feature.icon}</span>
               </div>
               <h3 className="text-xl font-semibold text-primary mb-4">{feature.title}</h3>

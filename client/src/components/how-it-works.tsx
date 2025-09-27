@@ -56,7 +56,7 @@ export default function HowItWorks() {
   ];
 
   return (
-    <section id="how-it-works" className="py-20 fade-in-section bg-gradient-to-b from-primary-green/5 to-primary-blue/5">
+    <section id="how-it-works" className="py-20 fade-in-section bg-gradient-to-b from-emerald-50 to-blue-50">
       <div className="max-w-container mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-4xl lg:text-5xl font-bold text-primary mb-6">How EMDRise Works</h2>
@@ -72,7 +72,7 @@ export default function HowItWorks() {
               const IconComponent = step.icon;
               return (
                 <div key={index} className="card-custom text-center" data-testid={`step-${index + 1}`}>
-                  <div className="w-16 h-16 rounded-custom mx-auto mb-4 flex items-center justify-center bg-gradient-to-br from-primary-blue to-primary-green">
+                  <div className="w-16 h-16 rounded-custom mx-auto mb-4 flex items-center justify-center bg-gradient-to-br from-blue-500 to-emerald-500">
                     <IconComponent className="w-8 h-8 text-white" aria-hidden="true" />
                   </div>
                   <h3 className="text-xl font-semibold text-primary mb-3">{step.title}</h3>
@@ -90,7 +90,7 @@ export default function HowItWorks() {
               const IconComponent = step.icon;
               return (
                 <div key={index + 4} className="card-custom text-center" data-testid={`step-${index + 5}`}>
-                  <div className="w-16 h-16 rounded-custom mx-auto mb-4 flex items-center justify-center bg-gradient-to-br from-primary-blue to-primary-green">
+                  <div className="w-16 h-16 rounded-custom mx-auto mb-4 flex items-center justify-center bg-gradient-to-br from-blue-500 to-emerald-500">
                     <IconComponent className="w-8 h-8 text-white" aria-hidden="true" />
                   </div>
                   <h3 className="text-xl font-semibold text-primary mb-3">{step.title}</h3>

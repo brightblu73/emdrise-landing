@@ -18,7 +18,7 @@ export default function WhyEMDR() {
   ];
 
   return (
-    <section className="py-20 fade-in-section bg-gradient-to-b from-primary-blue/5 to-primary-green/5">
+    <section className="py-20 fade-in-section bg-gradient-to-b from-blue-50 to-emerald-50">
       <div className="max-w-container mx-auto px-6">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           <div>
