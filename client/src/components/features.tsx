@@ -19,14 +19,27 @@ export default function Features() {
           <h2 className="text-4xl lg:text-5xl font-bold text-primary mb-6">Why EMDRise?</h2>
         </div>
         
-        <div className="max-w-4xl mx-auto">
-          <div className="space-y-6 mb-12">
-            {reasons.map((reason, index) => (
-              <div key={index} className="flex items-start space-x-4 p-6 card-custom hover:shadow-lg transition-all duration-200" data-testid={`reason-${index + 1}`}>
-                <div className="w-3 h-3 bg-gradient-to-br from-blue-500 to-emerald-500 rounded-full flex-shrink-0 mt-2"></div>
-                <p className="text-lg text-muted leading-relaxed">{reason}</p>
-              </div>
-            ))}
+        <div className="max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+            {/* First column - first 5 reasons */}
+            <div className="space-y-6">
+              {reasons.slice(0, 5).map((reason, index) => (
+                <div key={index} className="flex items-start space-x-4 p-6 card-custom hover:shadow-lg transition-all duration-200" data-testid={`reason-${index + 1}`}>
+                  <div className="w-3 h-3 bg-gradient-to-br from-blue-500 to-emerald-500 rounded-full flex-shrink-0 mt-2"></div>
+                  <p className="text-lg text-muted leading-relaxed">{reason}</p>
+                </div>
+              ))}
+            </div>
+            
+            {/* Second column - last 5 reasons */}
+            <div className="space-y-6">
+              {reasons.slice(5, 10).map((reason, index) => (
+                <div key={index + 5} className="flex items-start space-x-4 p-6 card-custom hover:shadow-lg transition-all duration-200" data-testid={`reason-${index + 6}`}>
+                  <div className="w-3 h-3 bg-gradient-to-br from-blue-500 to-emerald-500 rounded-full flex-shrink-0 mt-2"></div>
+                  <p className="text-lg text-muted leading-relaxed">{reason}</p>
+                </div>
+              ))}
+            </div>
           </div>
           
           <div className="text-center">
