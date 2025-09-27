@@ -9,19 +9,12 @@ export default function CTA() {
           Join the growing community of users who have found relief through EMDRise. Start your free trial today and experience the power of professional Self-Directed EMDR.
         </p>
         
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+        <div className="flex justify-center">
           <Button 
             className="bg-white text-primary px-8 py-4 rounded-custom font-semibold text-lg hover:bg-gray-50 transition-colors focus-visible"
-            data-testid="button-download-ios"
+            data-testid="button-download-app-store"
           >
-            Download for iOS
-          </Button>
-          <Button 
-            variant="outline"
-            className="border-2 border-white text-white px-8 py-4 rounded-custom font-semibold text-lg hover:bg-white/10 transition-colors focus-visible bg-transparent"
-            data-testid="button-watch-demo"
-          >
-            Watch Demo
+            Download on App Store
           </Button>
         </div>
       </div>
