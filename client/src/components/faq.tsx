@@ -76,7 +76,7 @@ export default function FAQ() {
   };
 
   return (
-    <section id="faq" className="py-20 fade-in-section">
+    <section id="faq" className="py-20 fade-in-section bg-gradient-to-b from-primary-blue/5 to-primary-green/5">
       <div className="max-w-4xl mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-4xl lg:text-5xl font-bold text-primary mb-6">Frequently Asked Questions</h2>

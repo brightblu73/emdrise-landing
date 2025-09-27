@@ -39,7 +39,7 @@ export default function Features() {
   ];
 
   return (
-    <section id="features" className="py-20 fade-in-section">
+    <section id="features" className="py-20 fade-in-section bg-gradient-to-b from-primary-blue/5 to-primary-green/5">
       <div className="max-w-container mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-4xl lg:text-5xl font-bold text-primary mb-6">Powerful Features</h2>
