@@ -10,12 +10,13 @@ export default function CTA() {
         </p>
         
         <div className="flex justify-center">
-          <Button 
-            className="bg-white text-primary px-8 py-4 rounded-custom font-semibold text-lg hover:bg-gray-50 transition-colors focus-visible"
-            data-testid="button-download-app-store"
-          >
-            Download on App Store
-          </Button>
+          <a href="#" className="hover:opacity-90 transition-opacity" data-testid="link-app-store">
+            <img 
+              src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" 
+              alt="Download EMDRise on the App Store" 
+              className="h-16"
+            />
+          </a>
         </div>
       </div>
     </section>
