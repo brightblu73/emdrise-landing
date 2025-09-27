@@ -9,6 +9,9 @@ export default function EndorsementsTicker() {
 
   return (
     <section className="py-12 border-y border-custom">
+      <div className="text-center mb-8">
+        <h2 className="text-2xl lg:text-3xl font-semibold text-primary">Leading organisations that endorse or recommend EMDR</h2>
+      </div>
       <div className="ticker-container">
         <div className="ticker-track">
           {/* First set of endorsements */}
