@@ -6,7 +6,7 @@ export default function CTA() {
       <div className="max-w-container mx-auto px-6 text-center">
         <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">Ready to Begin Your Healing Journey?</h2>
         <p className="text-xl text-white/90 max-w-3xl mx-auto leading-relaxed mb-8">
-          Join thousands of users who have found relief through EMDRise. Start your free trial today and experience the power of professional EMDR therapy.
+          Join the growing community of users who have found relief through EMDRise. Start your free trial today and experience the power of professional Self-Directed EMDR.
         </p>
         
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
