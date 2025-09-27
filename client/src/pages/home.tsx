@@ -3,7 +3,6 @@ import Header from "@/components/header";
 import Hero from "@/components/hero";
 import EndorsementsTicker from "@/components/endorsements-ticker";
 import HowItWorks from "@/components/how-it-works";
-import WhyEMDR from "@/components/why-emdr";
 import Features from "@/components/features";
 import Testimonials from "@/components/testimonials";
 import FAQ from "@/components/faq";
@@ -47,7 +46,6 @@ export default function Home() {
         <Hero />
         <EndorsementsTicker />
         <HowItWorks />
-        <WhyEMDR />
         <Features />
         <Testimonials />
         <FAQ />
