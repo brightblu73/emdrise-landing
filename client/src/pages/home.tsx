@@ -44,8 +44,8 @@ export default function Home() {
       <Header />
       <main>
         <Hero />
-        <EndorsementsTicker />
         <HowItWorks />
+        <EndorsementsTicker />
         <Features />
         <Testimonials />
         <FAQ />
