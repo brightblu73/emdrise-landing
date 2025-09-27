@@ -16,7 +16,7 @@ export default function HowItWorks() {
     {
       icon: Sunrise,
       title: "Welcome & Introduction",
-      description: "Meet your therapist and learn how EMDR helps the brain process stuck memories."
+      description: "Meet your guide and learn how EMDR helps the brain process stuck memories."
     },
     {
       icon: Home,
