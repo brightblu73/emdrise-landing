@@ -9,7 +9,7 @@ export default function Hero() {
             Professional <span className="text-emerald-400">Self-Directed EMDR</span> In Your Own Space
           </h1>
           <p className="text-xl text-white/90 leading-relaxed mb-8">
-            Led by a therapist-designed video guide. Walking with you step be step offering structure, support, and connection when you need it most.
+            Created by EMDR therapists, EMDRise guides you step by step with therapist-designed videos that provide structure, reassurance, and support whenever you need it.
           </p>
           
           <div className="flex justify-center mt-8">
