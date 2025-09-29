@@ -30,7 +30,7 @@ export default function Footer() {
             © <span data-testid="text-copyright-year">{currentYear}</span> EMDRise Ltd. All rights reserved.
           </p>
           <div className="flex space-x-6 mt-4 md:mt-0">
-            <a href="#" className="text-white/80 hover:text-white transition-colors text-sm focus-visible" data-testid="link-footer-contact">Contact</a>
+            <a href="mailto:support@emdrise.com" className="text-white/80 hover:text-white transition-colors text-sm focus-visible" data-testid="link-footer-contact">Contact</a>
             <Link href="/privacy" className="text-white/80 hover:text-white transition-colors text-sm focus-visible" data-testid="link-footer-privacy">
               Privacy Policy
             </Link>
