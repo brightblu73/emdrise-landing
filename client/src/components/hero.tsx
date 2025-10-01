@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import { APP_STORE_URL } from "@/config";
 
 export default function Hero() {
   return (
@@ -13,7 +14,7 @@ export default function Hero() {
           </p>
           
           <div className="flex justify-center mt-8">
-            <a href="#" className="hover:opacity-90 transition-opacity" data-testid="link-app-store">
+            <a href={APP_STORE_URL} className="hover:opacity-90 transition-opacity" data-testid="link-app-store">
               <img 
                 src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" 
                 alt="Download EMDRise on the App Store" 
