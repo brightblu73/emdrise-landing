@@ -1,46 +1,38 @@
 export default function EndorsementsTicker() {
-  const endorsements = [
-    { name: "World Health Organization", logo: "/assets/endorse/who.png", alt: "World Health Organization logo - endorsing EMDR therapy" },
-    { name: "American Psychological Association", logo: "/assets/endorse/apa.png", alt: "American Psychological Association logo - EMDR therapy endorsement" },
-    { name: "Department of Veterans Affairs", logo: "/assets/endorse/va.png", alt: "Department of Veterans Affairs logo - supporting EMDR for veterans" },
-    { name: "National Institute for Health", logo: "/assets/endorse/nice.png", alt: "National Institute for Health and Care Excellence logo - EMDR guidelines" },
-    { name: "EMDR International Association", logo: "/assets/endorse/emdria.png", alt: "EMDR International Association logo - professional standards" },
+  const organizations = [
+    "NICE",
+    "World Health Organization",
+    "American Psychological Association",
+    "U.S. Department of Veterans Affairs",
+    "EMDR International Association (EMDRIA)",
+    "SAMHSA"
   ];
 
   return (
-    <section className="py-12 border-y border-custom">
-      <div className="text-center mb-8">
-        <h2 className="text-2xl lg:text-3xl font-semibold text-primary">Leading organisations that endorse or recommend EMDR</h2>
-      </div>
-      <div className="ticker-container">
-        <div className="ticker-track">
-          {/* First set of endorsements */}
-          <div className="flex items-center space-x-16 px-8">
-            {endorsements.map((endorsement, index) => (
-              <div key={`first-${index}`} className="flex items-center space-x-3" data-testid={`endorsement-${endorsement.name.toLowerCase().replace(/\s+/g, '-')}-1`}>
-                <img 
-                  src={endorsement.logo} 
-                  alt={endorsement.alt}
-                  className="w-12 h-12 object-contain"
-                />
-                <span className="font-semibold text-muted whitespace-nowrap">{endorsement.name}</span>
+    <section className="py-16 bg-gradient-to-br from-blue-500 to-emerald-500">
+      <div className="max-w-container mx-auto px-6">
+        <div className="text-center mb-10">
+          <h2 className="text-2xl lg:text-3xl font-semibold text-white mb-8">
+            EMDR therapy is recognised or recommended by
+          </h2>
+          
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 mb-8">
+            {organizations.map((org, index) => (
+              <div 
+                key={index} 
+                className="flex items-center justify-center"
+                data-testid={`recognition-${org.toLowerCase().replace(/\s+/g, '-').replace(/[()]/g, '')}`}
+              >
+                <span className="text-white font-bold uppercase tracking-wide text-center text-sm lg:text-base">
+                  {org}
+                </span>
               </div>
             ))}
           </div>
           
-          {/* Duplicate set for seamless loop */}
-          <div className="flex items-center space-x-16 px-8">
-            {endorsements.map((endorsement, index) => (
-              <div key={`second-${index}`} className="flex items-center space-x-3" data-testid={`endorsement-${endorsement.name.toLowerCase().replace(/\s+/g, '-')}-2`}>
-                <img 
-                  src={endorsement.logo} 
-                  alt={endorsement.alt}
-                  className="w-12 h-12 object-contain"
-                />
-                <span className="font-semibold text-muted whitespace-nowrap">{endorsement.name}</span>
-              </div>
-            ))}
-          </div>
+          <p className="text-white/80 text-sm max-w-4xl mx-auto leading-relaxed">
+            These organisations recognise EMDR therapy in clinical guidelines. Inclusion here reflects support for EMDR as a method, not this specific app.
+          </p>
         </div>
       </div>
     </section>
