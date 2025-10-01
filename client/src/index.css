@@ -192,6 +192,22 @@
     opacity: 0.8;
   }
 
+  .ticker-container {
+    overflow: hidden;
+    position: relative;
+    background-color: var(--card);
+  }
+
+  .ticker-track {
+    display: flex;
+    animation: scroll 30s linear infinite;
+    will-change: transform;
+  }
+
+  .ticker-container:hover .ticker-track {
+    animation-play-state: paused;
+  }
+
   .fade-in-section {
     opacity: 0;
     transform: translateY(32px);
@@ -287,6 +303,15 @@
   }
 }
 
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
 @keyframes fadeInUp {
   from {
     opacity: 0;
@@ -300,6 +325,10 @@
 
 /* Reduce motion for accessibility */
 @media (prefers-reduced-motion: reduce) {
+  .ticker-track {
+    animation: none !important;
+    transform: none !important;
+  }
   .fade-in-section {
     opacity: 1 !important;
     transform: translateY(0) !important;
