@@ -1,3 +1,5 @@
+import { APP_STORE_URL } from "@/config";
+
 export default function Features() {
   const reasons = [
     "Therapist-written content guides you with clear video introductions before each stage.",
@@ -43,9 +45,9 @@ export default function Features() {
           </div>
           
           <div className="text-center">
-            <button className="btn-primary text-lg px-8 py-4 hover:scale-105 transition-transform" data-testid="button-get-started">
+            <a href={APP_STORE_URL} className="btn-primary text-lg px-8 py-4 hover:scale-105 transition-transform inline-block" data-testid="button-get-started">
               Get Started with EMDRise
-            </button>
+            </a>
           </div>
         </div>
       </div>

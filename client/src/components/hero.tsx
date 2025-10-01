@@ -1,4 +1,3 @@
-import { Button } from "@/components/ui/button";
 import { APP_STORE_URL } from "@/config";
 
 export default function Hero() {
