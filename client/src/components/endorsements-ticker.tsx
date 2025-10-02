@@ -16,7 +16,7 @@ export default function EndorsementsTicker() {
       <div className="max-w-container mx-auto px-6">
         <h2 
           id="recog-heading" 
-          className="text-white text-center font-extrabold tracking-wide text-sm lg:text-base mb-4"
+          className="text-white text-center font-extrabold tracking-tight text-xs lg:text-sm mb-4 max-w-4xl mx-auto"
         >
           EMDR THERAPY IS RECOGNISED OR RECOMMENDED BY
         </h2>
