@@ -10,31 +10,31 @@ export default function EndorsementsTicker() {
 
   return (
     <section 
-      className="py-12 lg:py-20 bg-gradient-to-br from-blue-500 via-blue-400 to-emerald-500"
+      className="py-8 lg:py-12 bg-gradient-to-br from-blue-500 via-blue-400 to-emerald-500"
       aria-labelledby="recog-heading"
     >
       <div className="max-w-container mx-auto px-6">
         <h2 
           id="recog-heading" 
-          className="text-white text-center font-extrabold tracking-wide text-xl lg:text-2xl mb-6"
+          className="text-white text-center font-extrabold tracking-wide text-sm lg:text-base mb-4"
         >
           EMDR THERAPY IS RECOGNISED OR RECOMMENDED BY
         </h2>
         
         <ul 
-          className="flex flex-wrap items-center justify-center gap-2 lg:gap-0 bg-white/10 backdrop-blur-sm rounded-2xl p-3 lg:p-4 mx-auto max-w-6xl"
+          className="flex flex-wrap items-center justify-center gap-1 lg:gap-0 bg-white/10 backdrop-blur-sm rounded-xl p-2 lg:p-3 mx-auto max-w-5xl"
           role="list" 
           aria-label="Recognising organisations"
         >
           {organizations.map((org, index) => (
             <li 
               key={index}
-              className="text-white font-extrabold uppercase tracking-widest whitespace-nowrap px-4 lg:px-6 py-2 text-center text-xs lg:text-base relative"
+              className="text-white font-extrabold uppercase tracking-wider whitespace-nowrap px-3 lg:px-5 py-1.5 text-center text-xs lg:text-sm relative"
               data-testid={`org-${index + 1}`}
             >
               {index > 0 && (
                 <span 
-                  className="hidden lg:block absolute left-0 top-1/2 -translate-y-1/2 w-px h-5 bg-white/40"
+                  className="hidden lg:block absolute left-0 top-1/2 -translate-y-1/2 w-px h-4 bg-white/40"
                   aria-hidden="true"
                 />
               )}
