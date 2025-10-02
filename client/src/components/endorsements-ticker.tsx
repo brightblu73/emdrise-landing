@@ -1,47 +1,51 @@
 export default function EndorsementsTicker() {
-  const endorsements = [
-    { name: "World Health Organization", logo: "/assets/endorse/who.png", alt: "World Health Organization logo - endorsing EMDR therapy" },
-    { name: "American Psychological Association", logo: "/assets/endorse/apa.png", alt: "American Psychological Association logo - EMDR therapy endorsement" },
-    { name: "Department of Veterans Affairs", logo: "/assets/endorse/va.png", alt: "Department of Veterans Affairs logo - supporting EMDR for veterans" },
-    { name: "National Institute for Health", logo: "/assets/endorse/nice.png", alt: "National Institute for Health and Care Excellence logo - EMDR guidelines" },
-    { name: "EMDR International Association", logo: "/assets/endorse/emdria.png", alt: "EMDR International Association logo - professional standards" },
+  const organizations = [
+    "NICE",
+    "World Health Organization",
+    "American Psychological Association",
+    "U.S. Department of Veterans Affairs",
+    "EMDR International Association (EMDRIA)",
+    "SAMHSA"
   ];
 
   return (
-    <section className="py-12 border-y border-custom">
-      <div className="text-center mb-8">
-        <h2 className="text-2xl lg:text-3xl font-semibold text-primary">Leading organisations that endorse or recommend EMDR</h2>
-      </div>
-      <div className="ticker-container">
-        <div className="ticker-track">
-          {/* First set of endorsements */}
-          <div className="flex items-center space-x-16 px-8">
-            {endorsements.map((endorsement, index) => (
-              <div key={`first-${index}`} className="flex items-center space-x-3" data-testid={`endorsement-${endorsement.name.toLowerCase().replace(/\s+/g, '-')}-1`}>
-                <img 
-                  src={endorsement.logo} 
-                  alt={endorsement.alt}
-                  className="w-12 h-12 object-contain"
+    <section 
+      className="py-12 lg:py-20 bg-gradient-to-br from-blue-500 via-blue-400 to-emerald-500"
+      aria-labelledby="recog-heading"
+    >
+      <div className="max-w-container mx-auto px-6">
+        <h2 
+          id="recog-heading" 
+          className="text-white text-center font-extrabold tracking-wide text-xl lg:text-2xl mb-6"
+        >
+          EMDR THERAPY IS RECOGNISED OR RECOMMENDED BY
+        </h2>
+        
+        <ul 
+          className="flex flex-wrap items-center justify-center gap-2 lg:gap-0 bg-white/10 backdrop-blur-sm rounded-2xl p-3 lg:p-4 mx-auto max-w-6xl"
+          role="list" 
+          aria-label="Recognising organisations"
+        >
+          {organizations.map((org, index) => (
+            <li 
+              key={index}
+              className="text-white font-extrabold uppercase tracking-widest whitespace-nowrap px-4 lg:px-6 py-2 text-center text-xs lg:text-base relative"
+              data-testid={`org-${index + 1}`}
+            >
+              {index > 0 && (
+                <span 
+                  className="hidden lg:block absolute left-0 top-1/2 -translate-y-1/2 w-px h-5 bg-white/40"
+                  aria-hidden="true"
                 />
-                <span className="font-semibold text-muted whitespace-nowrap">{endorsement.name}</span>
-              </div>
-            ))}
-          </div>
-          
-          {/* Duplicate set for seamless loop */}
-          <div className="flex items-center space-x-16 px-8">
-            {endorsements.map((endorsement, index) => (
-              <div key={`second-${index}`} className="flex items-center space-x-3" data-testid={`endorsement-${endorsement.name.toLowerCase().replace(/\s+/g, '-')}-2`}>
-                <img 
-                  src={endorsement.logo} 
-                  alt={endorsement.alt}
-                  className="w-12 h-12 object-contain"
-                />
-                <span className="font-semibold text-muted whitespace-nowrap">{endorsement.name}</span>
-              </div>
-            ))}
-          </div>
-        </div>
+              )}
+              {org}
+            </li>
+          ))}
+        </ul>
+        
+        <p className="text-white/90 text-center mt-4 text-sm lg:text-base max-w-3xl mx-auto">
+          These organisations recognise EMDR therapy in clinical guidelines. Inclusion here reflects support for EMDR as a method, not this specific app.
+        </p>
       </div>
     </section>
   );
