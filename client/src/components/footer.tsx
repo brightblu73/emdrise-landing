@@ -12,14 +12,11 @@ export default function Footer() {
     <footer className="py-8 bg-gradient-to-br from-blue-500 to-emerald-500">
       <div className="max-w-container mx-auto px-6">
         <div>
-          <div className="flex items-center space-x-3 mb-3">
-            <img 
-              src="/assets/emdrise-logo.svg" 
-              alt="EMDRise - Professional Self-Directed EMDR Therapy App Logo" 
-              className="brightness-0 invert"
-              style={{ height: '48px' }}
-            />
-          </div>
+          <img 
+            src="/assets/emdrise-logo.svg" 
+            alt="EMDRise - Professional Self-Directed EMDR Therapy App Logo" 
+            className="brightness-0 invert h-12 w-auto max-w-[200px] object-contain mb-3 block"
+          />
           <p className="text-white/80 whitespace-nowrap text-sm">
             Self-directed EMDR therapy, professionally designed and available on demand
           </p>
