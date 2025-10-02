@@ -42,10 +42,6 @@ export default function EndorsementsTicker() {
             </li>
           ))}
         </ul>
-        
-        <p className="text-white/90 text-center mt-4 text-sm lg:text-base max-w-3xl mx-auto">
-          These organisations recognise EMDR therapy in clinical guidelines. Inclusion here reflects support for EMDR as a method, not this specific app.
-        </p>
       </div>
     </section>
   );
