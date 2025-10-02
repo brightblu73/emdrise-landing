@@ -29,7 +29,7 @@ export default function EndorsementsTicker() {
           {organizations.map((org, index) => (
             <li 
               key={index}
-              className="text-white font-extrabold uppercase tracking-wider whitespace-nowrap px-3 lg:px-5 py-1.5 text-center text-xs lg:text-sm relative"
+              className="text-white font-extrabold uppercase tracking-tight whitespace-nowrap px-2 lg:px-4 py-1 text-center text-[10px] lg:text-xs relative"
               data-testid={`org-${index + 1}`}
             >
               {index > 0 && (
