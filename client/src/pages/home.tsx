@@ -4,6 +4,7 @@ import Hero from "@/components/hero";
 import EndorsementsTicker from "@/components/endorsements-ticker";
 import HowItWorks from "@/components/how-it-works";
 import Features from "@/components/features";
+import ExpertEndorsement from "@/components/expert-endorsement";
 import FAQ from "@/components/faq";
 import CTA from "@/components/cta";
 import Footer from "@/components/footer";
@@ -46,6 +47,7 @@ export default function Home() {
         <HowItWorks />
         <EndorsementsTicker />
         <Features />
+        <ExpertEndorsement />
         <FAQ />
         <CTA />
       </main>
