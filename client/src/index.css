@@ -256,20 +256,21 @@
     justify-content: center;
     align-items: center;
     overflow: hidden;
-    border-radius: 18px;
-    width: 90%;
-    max-width: 640px;
-    margin: 0 auto;
-    background: #000;
+    border-radius: 16px;
+    background-color: #000;
+    isolation: isolate; /* prevents background bleed through corners */
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.15); /* optional subtle depth */
   }
 
   .video-wrap video,
   .promo-video video {
-    width: 105%;
+    display: block;
+    width: 100%;
     height: auto;
     object-fit: cover;
-    object-position: center;
-    border-radius: 18px;
+    border-radius: 0; /* rely only on container radius */
+    transform: translateZ(0); /* fixes pixelation/glitch at corners */
+    backface-visibility: hidden; /* prevents rendering flicker */
   }
 
   .video,
