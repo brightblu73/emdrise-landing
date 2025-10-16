@@ -1,5 +1,3 @@
-import { APP_STORE_URL } from "@/config";
-
 export default function Hero() {
   return (
     <section className="py-20 lg:py-32 fade-in-section emdr-gradient">
@@ -12,14 +10,18 @@ export default function Hero() {
             Created by EMDR therapists, EMDRise guides you step by step with therapist-designed videos that provide structure, reassurance, and support whenever you need it.
           </p>
           
-          <div className="flex justify-center mt-8">
-            <a href={APP_STORE_URL} className="hover:opacity-90 transition-opacity" data-testid="link-app-store">
-              <img 
-                src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" 
-                alt="Download EMDRise on the App Store" 
-                className="h-16"
-              />
-            </a>
+          <div className="flex flex-col items-center gap-4 mt-8">
+            <div className="inline-flex flex-col items-center gap-2 bg-white/10 backdrop-blur-sm border-2 border-white/30 rounded-2xl px-8 py-5" data-testid="badge-coming-soon">
+              <div className="text-sm font-semibold text-emerald-300 uppercase tracking-wider">
+                Coming Soon
+              </div>
+              <div className="text-2xl font-bold text-white">
+                Launching November 2025
+              </div>
+              <div className="text-sm text-white/80">
+                Available on the App Store
+              </div>
+            </div>
           </div>
         </div>
       </div>
