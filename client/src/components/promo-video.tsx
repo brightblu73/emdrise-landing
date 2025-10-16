@@ -1,3 +1,5 @@
+import croppedVideoSrc from "@assets/videos/cropped_video.mp4";
+
 export default function PromoVideo() {
   return (
     <section className="py-16 lg:py-24 bg-blue-50">
@@ -14,7 +16,7 @@ export default function PromoVideo() {
             data-testid="video-promo"
           >
             <source
-              src="https://jxhjghgectlpgrpwpkfd.supabase.co/storage/v1/object/public/videos/Landing%20Page%20-%20Maria%20(no%20WM).mp4"
+              src={croppedVideoSrc}
               type="video/mp4"
             />
             Your browser does not support the video tag.
