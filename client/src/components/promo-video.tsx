@@ -1,4 +1,4 @@
-import croppedVideoSrc from "@assets/videos/cropped_video.mp4";
+import croppedVideoSrc from "@assets/videos/maria_video.mp4";
 
 export default function PromoVideo() {
   return (
