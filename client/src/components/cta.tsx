@@ -2,7 +2,7 @@ import { APP_STORE_URL } from "@/config";
 
 export default function CTA() {
   return (
-    <section className="py-20 bg-gradient-to-br from-blue-600 via-blue-500 to-emerald-500 fade-in-section">
+    <section className="py-20 emdr-gradient fade-in-section">
       <div className="max-w-container mx-auto px-6 text-center">
         <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">Ready to Begin Your Healing Journey?</h2>
         <p className="text-xl text-white/90 max-w-3xl mx-auto leading-relaxed mb-8">

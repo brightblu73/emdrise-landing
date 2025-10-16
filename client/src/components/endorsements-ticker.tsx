@@ -10,7 +10,7 @@ export default function EndorsementsTicker() {
 
   return (
     <section 
-      className="py-8 lg:py-12 bg-gradient-to-br from-blue-500 via-blue-400 to-emerald-500"
+      className="py-8 lg:py-12 emdr-gradient"
       aria-labelledby="recog-heading"
     >
       <div className="max-w-container mx-auto px-6">

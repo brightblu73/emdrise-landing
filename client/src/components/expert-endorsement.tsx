@@ -1,6 +1,6 @@
 export default function ExpertEndorsement() {
   return (
-    <section className="py-16 lg:py-20 bg-gradient-to-br from-blue-500 to-emerald-500">
+    <section className="py-16 lg:py-20 emdr-gradient">
       <div className="max-w-container mx-auto px-6">
         <h2 className="text-3xl lg:text-4xl font-bold text-center mb-12 text-white">
           What The Experts Say

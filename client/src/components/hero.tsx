@@ -2,7 +2,7 @@ import { APP_STORE_URL } from "@/config";
 
 export default function Hero() {
   return (
-    <section className="py-20 lg:py-32 fade-in-section bg-gradient-to-br from-blue-500 to-emerald-500">
+    <section className="py-20 lg:py-32 fade-in-section emdr-gradient">
       <div className="max-w-container mx-auto px-6">
         <div className="text-center max-w-4xl mx-auto">
           <h1 className="text-5xl lg:text-6xl font-bold text-white leading-tight mb-6">

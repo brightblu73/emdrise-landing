@@ -11,7 +11,7 @@
   --card-foreground: hsl(222, 47%, 11%);      /* EMDRise foreground */
   --popover: hsl(210, 35%, 97%);              /* card-bg per guidelines */
   --popover-foreground: hsl(222, 47%, 11%);   /* EMDRise foreground */
-  --primary: hsl(217, 88%, 58%);              /* EMDRise primary-blue */
+  --primary: #1E88E5;                         /* EMDRise primary-blue - exact logo color */
   --primary-foreground: hsl(0, 0%, 100%);     /* white */
   --secondary: hsl(210, 40%, 98%);            /* therapeutic-bg */
   --secondary-foreground: hsl(222, 47%, 11%); /* EMDRise foreground */
@@ -23,27 +23,27 @@
   --destructive-foreground: hsl(0, 0%, 100%); /* white */
   --border: hsl(214, 32%, 91%);               /* EMDRise border-custom */
   --input: hsl(214, 32%, 91%);                /* EMDRise border-custom */
-  --ring: hsl(217, 88%, 58%);                 /* EMDRise primary-blue */
-  --chart-1: hsl(217, 88%, 58%);              /* EMDRise primary-blue */
+  --ring: #1E88E5;                            /* EMDRise logo blue */
+  --chart-1: #1E88E5;                         /* EMDRise logo blue */
   --chart-2: hsl(158, 92%, 40%);              /* EMDRise primary-green */
   --chart-3: hsl(41, 96%, 48%);               /* EMDRise warm-accent */
   --chart-4: hsl(212, 92%, 66%);              /* EMDRise secondary-blue */
   --chart-5: hsl(162, 83%, 58%);              /* EMDRise secondary-green */
   --sidebar: hsl(210, 35%, 97%);              /* card-bg per guidelines */
   --sidebar-foreground: hsl(222, 47%, 11%);   /* EMDRise foreground */
-  --sidebar-primary: hsl(217, 88%, 58%);      /* EMDRise primary-blue */
+  --sidebar-primary: #1E88E5;                 /* EMDRise logo blue */
   --sidebar-primary-foreground: hsl(0, 0%, 100%); /* white */
   --sidebar-accent: hsl(210, 40%, 98%);       /* therapeutic-bg */
   --sidebar-accent-foreground: hsl(222, 47%, 11%); /* EMDRise foreground */
   --sidebar-border: hsl(214, 32%, 91%);       /* EMDRise border-custom */
-  --sidebar-ring: hsl(217, 88%, 58%);         /* EMDRise primary-blue */
+  --sidebar-ring: #1E88E5;                    /* EMDRise logo blue */
   --font-sans: 'Inter', system-ui, sans-serif;
   --font-serif: Georgia, serif;
   --font-mono: Menlo, monospace;
   --radius: 1rem;
 
   /* EMDRise brand tokens - exact brand guidelines specification */
-  --primary-blue: hsl(217, 88%, 58%);        /* #1E90FF */
+  --primary-blue: #1E88E5;                   /* EMDRise logo blue - exact hex match */
   --secondary-blue: hsl(212, 92%, 66%);      /* #3B9DFF */
   --primary-green: hsl(158, 92%, 40%);       /* #05A660 */
   --secondary-green: hsl(162, 83%, 58%);     /* #1DD1A1 */
@@ -72,7 +72,7 @@
   --card-foreground: hsl(210, 40%, 98%);    /* therapeutic-bg for contrast */
   --popover: hsl(222, 47%, 8%);             /* dark background */
   --popover-foreground: hsl(210, 40%, 98%); /* therapeutic-bg for contrast */
-  --primary: hsl(217, 88%, 58%);            /* EMDRise primary-blue unchanged */
+  --primary: #1E88E5;                       /* EMDRise logo blue */
   --primary-foreground: hsl(0, 0%, 100%);   /* white */
   --secondary: hsl(222, 47%, 15%);          /* slightly lighter dark */
   --secondary-foreground: hsl(210, 40%, 98%); /* therapeutic-bg for contrast */
@@ -84,15 +84,15 @@
   --destructive-foreground: hsl(0, 0%, 100%); /* white */
   --border: hsl(222, 47%, 25%);             /* darker border */
   --input: hsl(222, 47%, 20%);              /* dark input background */
-  --ring: hsl(217, 88%, 58%);               /* EMDRise primary-blue */
+  --ring: #1E88E5;                          /* EMDRise logo blue */
   --sidebar: hsl(222, 47%, 11%);            /* dark sidebar */
   --sidebar-foreground: hsl(210, 40%, 98%); /* light foreground */
-  --sidebar-primary: hsl(217, 88%, 58%);    /* EMDRise primary-blue */
+  --sidebar-primary: #1E88E5;               /* EMDRise logo blue */
   --sidebar-primary-foreground: hsl(0, 0%, 100%); /* white */
   --sidebar-accent: hsl(222, 47%, 15%);     /* slightly lighter dark */
   --sidebar-accent-foreground: hsl(210, 40%, 98%); /* light foreground */
   --sidebar-border: hsl(222, 47%, 25%);     /* darker border */
-  --sidebar-ring: hsl(217, 88%, 58%);       /* EMDRise primary-blue */
+  --sidebar-ring: #1E88E5;                  /* EMDRise logo blue */
 }
 
 @layer base {

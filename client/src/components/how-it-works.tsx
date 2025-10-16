@@ -72,7 +72,7 @@ export default function HowItWorks() {
               const IconComponent = step.icon;
               return (
                 <div key={index} className="card-custom text-center h-[220px] flex flex-col justify-start" data-testid={`step-${index + 1}`}>
-                  <div className="w-16 h-16 rounded-custom mx-auto mb-4 flex items-center justify-center bg-gradient-to-br from-blue-500 to-emerald-500">
+                  <div className="w-16 h-16 rounded-custom mx-auto mb-4 flex items-center justify-center emdr-gradient">
                     <IconComponent className="w-8 h-8 text-white" aria-hidden="true" />
                   </div>
                   <h3 className="text-xl font-semibold text-primary mb-3">{step.title}</h3>
@@ -90,7 +90,7 @@ export default function HowItWorks() {
               const IconComponent = step.icon;
               return (
                 <div key={index + 4} className="card-custom text-center h-[220px] flex flex-col justify-start" data-testid={`step-${index + 5}`}>
-                  <div className="w-16 h-16 rounded-custom mx-auto mb-4 flex items-center justify-center bg-gradient-to-br from-blue-500 to-emerald-500">
+                  <div className="w-16 h-16 rounded-custom mx-auto mb-4 flex items-center justify-center emdr-gradient">
                     <IconComponent className="w-8 h-8 text-white" aria-hidden="true" />
                   </div>
                   <h3 className="text-xl font-semibold text-primary mb-3">{step.title}</h3>

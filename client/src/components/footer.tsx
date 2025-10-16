@@ -9,7 +9,7 @@ export default function Footer() {
   }, []);
 
   return (
-    <footer className="py-8 bg-gradient-to-br from-blue-500 to-emerald-500">
+    <footer className="py-8 emdr-gradient">
       <div className="max-w-container mx-auto px-6">
         <div>
           <img 
