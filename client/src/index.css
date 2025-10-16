@@ -249,24 +249,45 @@
     }
   }
 
-  .video,
-  .screen,
+  .video-wrap,
   .promo-video {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    border-radius: 18px;
+    width: 90%;
+    max-width: 640px;
+    margin: 0 auto;
+    background: #000;
+  }
+
+  .video-wrap video,
+  .promo-video video {
+    width: 105%;
+    height: auto;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 18px;
+  }
+
+  .video,
+  .screen {
     display: block;
     width: 100%;
     height: 100%;
     object-fit: cover;
-    border-radius: 24px;
+    border-radius: 18px;
     overflow: hidden;
   }
 
-  .video-wrap,
   .device {
     position: relative;
-    border-radius: 24px;
+    border-radius: 18px;
     overflow: hidden;
     aspect-ratio: 16 / 9;
-    max-width: 720px;
+    max-width: 640px;
     margin: 0 auto;
   }
 }
