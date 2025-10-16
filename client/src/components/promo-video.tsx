@@ -6,9 +6,9 @@ export default function PromoVideo() {
           Meet one of your EMDR guides and discover how EMDRise works
         </h2>
         
-        <div className="max-w-4xl mx-auto mt-8">
+        <div className="video-wrap shadow-2xl mt-8">
           <video
-            className="w-full rounded-lg shadow-2xl aspect-video"
+            className="promo-video"
             controls
             preload="metadata"
             data-testid="video-promo"
