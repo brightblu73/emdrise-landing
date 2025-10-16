@@ -249,26 +249,39 @@
     }
   }
 
-  .video-wrap,
-  .promo-video {
+  .video-wrap {
     position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    display: block;
     overflow: hidden;
     border-radius: 18px;
     width: 90%;
     max-width: 640px;
     margin: 0 auto;
     background: #000;
+    aspect-ratio: 16 / 9;
   }
 
-  .video-wrap video,
-  .promo-video video {
-    width: 105%;
+  .video-wrap video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
     height: auto;
+    max-width: none;
     object-fit: cover;
     object-position: center;
+    border-radius: 0;
+  }
+
+  .promo-video {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
     border-radius: 18px;
   }
 
