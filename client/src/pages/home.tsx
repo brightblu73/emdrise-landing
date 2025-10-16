@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import Header from "@/components/header";
 import Hero from "@/components/hero";
+import PromoVideo from "@/components/promo-video";
 import EndorsementsTicker from "@/components/endorsements-ticker";
 import HowItWorks from "@/components/how-it-works";
 import Features from "@/components/features";
@@ -44,6 +45,7 @@ export default function Home() {
       <Header />
       <main>
         <Hero />
+        <PromoVideo />
         <HowItWorks />
         <EndorsementsTicker />
         <Features />
