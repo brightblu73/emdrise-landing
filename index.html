@@ -89,6 +89,67 @@
       height: auto;
     }
     
+    /* Text wrapping: Prevent mid-word breaks */
+    * {
+      word-break: keep-all;
+      overflow-wrap: break-word;
+      -webkit-hyphens: none;
+      hyphens: none;
+    }
+    
+    /* Feature boxes: Auto-resize with flexible layout */
+    [class*="grid"] {
+      display: grid !important;
+      gap: 1.5rem;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    }
+    
+    [class*="card"], [class*="feature"], [class*="box"] {
+      display: flex;
+      flex-direction: column;
+      padding: 1.5rem !important;
+      border-radius: 1rem !important;
+      overflow: hidden;
+      word-wrap: break-word;
+      overflow-wrap: break-word;
+      height: auto !important;
+      min-height: fit-content !important;
+    }
+    
+    /* Phone mockup video fix: Show actual video instead of placeholder */
+    .phone-mockup, [class*="phone"] {
+      position: relative;
+      width: 100%;
+      max-width: 320px;
+      margin: 0 auto;
+      aspect-ratio: 9 / 19.5;
+      border-radius: 2.5rem;
+      overflow: hidden;
+      background: #000;
+    }
+    
+    .phone-mockup video, [class*="phone"] video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 2.5rem;
+    }
+    
+    /* Hide phone frame image if it exists, show video instead */
+    .phone-frame, [class*="frame"] {
+      display: none !important;
+    }
+    
+    .phone-video, [class*="phone"] video {
+      position: relative !important;
+      z-index: 1 !important;
+      width: 100% !important;
+      height: 100% !important;
+      top: 0 !important;
+      left: 0 !important;
+      border-radius: 2.5rem !important;
+    }
+    
     /* Mobile-specific fixes */
     @media (max-width: 768px) {
       body {
@@ -108,23 +169,31 @@
       
       /* Fix text overflow in cards/boxes on mobile */
       h1, h2, h3, h4, h5, h6 {
-        word-wrap: break-word;
+        word-break: keep-all;
         overflow-wrap: break-word;
-        hyphens: auto;
         max-width: 100%;
       }
       
       p, li, span, div {
-        word-wrap: break-word;
+        word-break: keep-all;
         overflow-wrap: break-word;
         max-width: 100%;
       }
       
-      /* Ensure cards and boxes have proper constraints */
-      [class*="card"], [class*="box"], [class*="feature"] {
-        overflow: hidden;
-        word-wrap: break-word;
-        overflow-wrap: break-word;
+      /* Mobile feature boxes */
+      [class*="grid"] {
+        grid-template-columns: 1fr !important;
+        gap: 1rem;
+      }
+      
+      [class*="card"], [class*="feature"], [class*="box"] {
+        width: 100% !important;
+        margin-bottom: 1rem;
+      }
+      
+      /* Mobile phone mockup */
+      .phone-mockup, [class*="phone"] {
+        max-width: 280px;
       }
       
       /* Reduce font sizes slightly on very small screens */
@@ -143,6 +212,13 @@
         }
       }
     }
+    
+    /* Tablet responsiveness */
+    @media (min-width: 769px) and (max-width: 1024px) {
+      [class*="grid"] {
+        grid-template-columns: repeat(2, 1fr) !important;
+      }
+    }
   </style>
 </head>
 <body>
@@ -151,14 +227,25 @@
   <!-- Fix video poster to show Maria instead of black screen -->
   <script>
     document.addEventListener('DOMContentLoaded', function() {
-      // Wait for React to render the video element
+      // Wait for React to render the video elements
       setTimeout(function() {
-        const video = document.querySelector('video');
-        if (video) {
-          // Set poster image to show Maria before video plays
-          video.setAttribute('poster', '/assets/promo-poster.jpg');
-          // Ensure preload is set to show the poster
-          video.setAttribute('preload', 'metadata');
+        // Fix main promo video
+        const promoVideo = document.querySelector('[data-testid="video-promo"]');
+        if (promoVideo) {
+          promoVideo.setAttribute('poster', '/assets/promo-poster.jpg');
+          promoVideo.setAttribute('preload', 'metadata');
+        }
+        
+        // Fix phone mockup video - replace with actual Maria video
+        const phoneVideo = document.querySelector('.phone-video, .phone-mockup video');
+        if (phoneVideo) {
+          // Replace src with actual Maria video from Supabase
+          phoneVideo.setAttribute('src', '/assets/maria_video-CoOKnjen.mp4');
+          phoneVideo.setAttribute('poster', '/assets/promo-poster.jpg');
+          phoneVideo.setAttribute('preload', 'metadata');
+          phoneVideo.setAttribute('playsinline', 'true');
+          phoneVideo.setAttribute('controls', 'true');
+          phoneVideo.style.display = 'block';
         }
       }, 100);
     });
