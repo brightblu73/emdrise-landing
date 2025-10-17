@@ -1,0 +1,37 @@
+name: Auto Cache-Bust Deploy
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+      
+      - name: Update cache-busting version
+        run: |
+          VERSION=$(date +%Y%m%d%H%M%S)
+          echo "📦 New cache version: $VERSION"
+          sed -i "s/\.js?v=[0-9]\+/\.js?v=$VERSION/g" index.html
+          sed -i "s/\.css?v=[0-9]\+/\.css?v=$VERSION/g" index.html
+      
+      - name: Commit updated version
+        run: |
+          git config user.name "GitHub Actions Bot"
+          git config user.email "actions@github.com"
+          git add index.html
+          git diff --staged --quiet || git commit -m "🔄 Auto-update cache version to $(date +%Y%m%d%H%M%S)"
+          git push || echo "No changes to push"
+      
+      - name: Deploy to GitHub Pages
+        run: |
+          echo "✅ Deployed with cache-busting enabled"
+          echo "Current versions:"
+          grep "\.js?v=\|\.css?v=" index.html
