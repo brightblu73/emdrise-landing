@@ -17,7 +17,7 @@ export default function Footer() {
             alt="EMDRise - Professional Self-Directed EMDR Therapy App Logo" 
             className="brightness-0 invert h-12 w-auto max-w-[200px] object-contain mb-3 block"
           />
-          <p className="text-white/80 whitespace-nowrap text-sm">
+          <p className="text-white/80 text-sm">
             Self-directed EMDR therapy, professionally designed and available on demand
           </p>
         </div>

@@ -4,7 +4,7 @@ export default function Hero() {
       <div className="max-w-container mx-auto px-6">
         <div className="text-center max-w-4xl mx-auto">
           <h1 className="text-5xl lg:text-6xl font-bold text-white leading-tight mb-6">
-            Professional <span className="text-emerald-400 whitespace-nowrap">Self-Directed EMDR</span> In Your Own Space
+            Professional <span className="text-emerald-400"><span className="whitespace-nowrap">Self-Directed</span> EMDR</span> In Your Own Space
           </h1>
           <p className="text-xl text-white/90 leading-relaxed mb-8">
             Created by EMDR therapists, EMDRise guides you step by step with therapist-designed videos that provide structure, reassurance, and support whenever you need it.
