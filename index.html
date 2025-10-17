@@ -51,6 +51,62 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <script type="module" crossorigin src="/assets/index-DOH7Q0Gz.js"></script>
   <link rel="stylesheet" crossorigin href="/assets/index-BxgDnp-o.css">
+  
+  <!-- Mobile Responsive Fix: Prevent horizontal scrolling -->
+  <style>
+    html {
+      overflow-x: hidden;
+      width: 100%;
+    }
+    
+    body {
+      overflow-x: hidden;
+      width: 100%;
+      position: relative;
+      margin: 0;
+      padding: 0;
+    }
+    
+    #root {
+      overflow-x: hidden;
+      width: 100%;
+      max-width: 100vw;
+    }
+    
+    /* Ensure all sections and containers respect viewport width */
+    * {
+      max-width: 100%;
+    }
+    
+    /* Fix for sections and containers */
+    section, div, header, footer {
+      box-sizing: border-box;
+    }
+    
+    /* Ensure images and videos are responsive */
+    img, video {
+      max-width: 100%;
+      height: auto;
+    }
+    
+    /* Mobile-specific fixes */
+    @media (max-width: 768px) {
+      body {
+        overflow-x: hidden !important;
+      }
+      
+      /* Prevent any element from causing horizontal scroll */
+      * {
+        max-width: 100vw;
+      }
+      
+      /* Extra padding constraint for mobile */
+      section {
+        padding-left: clamp(1rem, 5vw, 2rem);
+        padding-right: clamp(1rem, 5vw, 2rem);
+      }
+    }
+  </style>
 </head>
 <body>
   <div id="root"></div>
