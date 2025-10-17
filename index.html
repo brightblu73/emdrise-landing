@@ -54,6 +54,28 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <script type="module" crossorigin src="/assets/index-DOH7Q0Gz.js?v=20251017"></script>
   <link rel="stylesheet" crossorigin href="/assets/index-BxgDnp-o.css?v=20251017">
+  
+  <!-- Mobile overflow fix -->
+  <style>
+    html, body {
+      overflow-x: hidden;
+      max-width: 100%;
+    }
+    
+    #root {
+      overflow-x: hidden;
+      max-width: 100vw;
+    }
+    
+    * {
+      max-width: 100%;
+    }
+    
+    img, video {
+      max-width: 100%;
+      height: auto;
+    }
+  </style>
 </head>
 <body>
   <div id="root"></div>
