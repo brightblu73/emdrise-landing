@@ -224,29 +224,91 @@
 <body>
   <div id="root"></div>
   
-  <!-- Fix video poster to show Maria instead of black screen -->
+  <!-- Fix content issues after React renders -->
   <script>
     document.addEventListener('DOMContentLoaded', function() {
-      // Wait for React to render the video elements
+      // Wait for React to fully render
       setTimeout(function() {
-        // Fix main promo video
-        const promoVideo = document.querySelector('[data-testid="video-promo"]');
-        if (promoVideo) {
-          promoVideo.setAttribute('poster', '/assets/promo-poster.jpg');
-          promoVideo.setAttribute('preload', 'metadata');
+        // Fix text breaking issues - prevent "Self-Directe d" type breaks
+        function fixTextBreaking() {
+          const allTextElements = document.querySelectorAll('h1, h2, h3, h4, h5, h6, p, li, span, div');
+          allTextElements.forEach(el => {
+            const text = el.textContent;
+            // Fix broken "Self-Directed EMDR" text
+            if (text.includes('Self-Directe d')) {
+              el.textContent = text.replace(/Self-Directe\s*d/g, 'Self-Directed');
+            }
+            // Fix broken "Evidence-Based" text
+            if (text.includes('Evidence- Based')) {
+              el.textContent = text.replace(/Evidence-\s*Based/g, 'Evidence-Based');
+            }
+            // Apply CSS to prevent future breaks
+            el.style.wordBreak = 'keep-all';
+            el.style.overflowWrap = 'break-word';
+          });
         }
         
-        // Fix phone mockup video - replace with actual Maria video
-        const phoneVideo = document.querySelector('.phone-video, .phone-mockup video');
-        if (phoneVideo) {
-          // Replace src with actual Maria video from Supabase
-          phoneVideo.setAttribute('src', '/assets/maria_video-CoOKnjen.mp4');
-          phoneVideo.setAttribute('poster', '/assets/promo-poster.jpg');
-          phoneVideo.setAttribute('preload', 'metadata');
-          phoneVideo.setAttribute('playsinline', 'true');
-          phoneVideo.setAttribute('controls', 'true');
-          phoneVideo.style.display = 'block';
+        // Fix phone mockup - replace image with actual video
+        function fixPhoneMockup() {
+          // Find phone mockup container
+          const phoneContainer = document.querySelector('[class*="phone"]') || 
+                                 document.querySelector('img[src*="phone"]')?.parentElement;
+          
+          if (phoneContainer) {
+            // Remove any existing image
+            const existingImg = phoneContainer.querySelector('img');
+            if (existingImg) {
+              existingImg.remove();
+            }
+            
+            // Create video element
+            const video = document.createElement('video');
+            video.src = '/assets/maria_video-CoOKnjen.mp4';
+            video.poster = '/assets/promo-poster.jpg';
+            video.controls = true;
+            video.playsInline = true;
+            video.preload = 'metadata';
+            video.style.width = '100%';
+            video.style.height = '100%';
+            video.style.objectFit = 'cover';
+            video.style.borderRadius = '2.5rem';
+            
+            // Insert video
+            phoneContainer.appendChild(video);
+          }
         }
+        
+        // Fix main promo video poster
+        function fixPromoVideo() {
+          const promoVideo = document.querySelector('[data-testid="video-promo"]') || 
+                             document.querySelector('video');
+          if (promoVideo) {
+            promoVideo.setAttribute('poster', '/assets/promo-poster.jpg');
+            promoVideo.setAttribute('preload', 'metadata');
+          }
+        }
+        
+        // Run all fixes
+        fixTextBreaking();
+        fixPhoneMockup();
+        fixPromoVideo();
+        
+        // Run fixes again after a delay to catch any delayed renders
+        setTimeout(function() {
+          fixTextBreaking();
+          fixPhoneMockup();
+          fixPromoVideo();
+        }, 500);
+        
+        // Watch for DOM changes and reapply fixes
+        const observer = new MutationObserver(function(mutations) {
+          fixTextBreaking();
+        });
+        
+        observer.observe(document.body, {
+          childList: true,
+          subtree: true
+        });
       }, 100);
     });
   </script>
