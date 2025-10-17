@@ -4,18 +4,6 @@ EMDRise is a professional EMDR (Eye Movement Desensitization and Reprocessing) t
 
 The project is structured as a full-stack web application with a React frontend, Express.js backend, and PostgreSQL database integration. It emphasizes accessibility, professional medical standards, and user privacy while delivering therapeutic content through modern web technologies.
 
-# Recent Changes
-
-## Mobile Responsiveness Fixes (October 2025)
-- **Text Wrapping**: Fixed "Self-Directed EMDR" text breaking mid-word on mobile by applying `whitespace-nowrap` only to "Self-Directed" word while allowing "EMDR" to wrap independently
-- **Footer Responsiveness**: Removed `whitespace-nowrap` from footer paragraph to allow natural text wrapping on small screens
-- **Horizontal Overflow Prevention**: Added comprehensive CSS rules in index.html:
-  - `overflow-x: hidden` applied to html, body, #root, main, section, and div elements
-  - `max-width: 100%` on all elements including pseudo-elements (::before, ::after)
-  - `box-sizing: border-box` enforced globally
-- **Testing**: Verified responsive behavior across viewports: 320px (iPhone SE), 390px (iPhone 12), 768px (tablet), 1920px (desktop)
-- **Important Note**: The aggressive `overflow-x: hidden` rules prevent horizontal scrolling but may affect future components requiring horizontal scroll. Test new features carefully for any unintended clipping.
-
 # User Preferences
 
 Preferred communication style: Simple, everyday language.
