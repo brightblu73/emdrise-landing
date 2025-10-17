@@ -110,6 +110,23 @@
 </head>
 <body>
   <div id="root"></div>
+  
+  <!-- Fix video poster to show Maria instead of black screen -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Wait for React to render the video element
+      setTimeout(function() {
+        const video = document.querySelector('video');
+        if (video) {
+          // Set poster image to show Maria before video plays
+          video.setAttribute('poster', '/assets/promo-poster.jpg');
+          // Ensure preload is set to show the poster
+          video.setAttribute('preload', 'metadata');
+        }
+      }, 100);
+    });
+  </script>
+  
   <!-- This is a replit script which adds a banner on the top of the page when opened in development mode outside the replit environment -->
   <script type="text/javascript" src="https://replit.com/public/js/replit-dev-banner.js"></script>
 </body>
