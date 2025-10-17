@@ -105,6 +105,43 @@
         padding-left: clamp(1rem, 5vw, 2rem);
         padding-right: clamp(1rem, 5vw, 2rem);
       }
+      
+      /* Fix text overflow in cards/boxes on mobile */
+      h1, h2, h3, h4, h5, h6 {
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+        hyphens: auto;
+        max-width: 100%;
+      }
+      
+      p, li, span, div {
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+        max-width: 100%;
+      }
+      
+      /* Ensure cards and boxes have proper constraints */
+      [class*="card"], [class*="box"], [class*="feature"] {
+        overflow: hidden;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+      }
+      
+      /* Reduce font sizes slightly on very small screens */
+      @media (max-width: 375px) {
+        h1 {
+          font-size: 2rem !important;
+        }
+        h2 {
+          font-size: 1.5rem !important;
+        }
+        h3 {
+          font-size: 1.25rem !important;
+        }
+        p {
+          font-size: 0.95rem !important;
+        }
+      }
     }
   </style>
 </head>
