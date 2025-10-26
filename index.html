@@ -68,6 +68,8 @@
       overscroll-behavior-y: none;
       /* Hardware acceleration for smoother scrolling */
       -webkit-overflow-scrolling: touch;
+      /* Ensure scrolling is available immediately */
+      min-height: 100vh;
     }
     
     body {
@@ -86,6 +88,8 @@
       /* Optimize rendering */
       -webkit-backface-visibility: hidden;
       backface-visibility: hidden;
+      /* Ensure body is scrollable immediately */
+      min-height: 100vh;
     }
     
     /* Constrain root container */
@@ -197,6 +201,12 @@
         /* Prevent unnecessary repaints */
         -webkit-backface-visibility: hidden;
         backface-visibility: hidden;
+      }
+      
+      /* Critical: Ensure body is always scrollable on mobile */
+      body {
+        position: relative !important;
+        overflow-y: auto !important;
       }
     }
     
