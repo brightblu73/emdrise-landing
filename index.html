@@ -104,12 +104,6 @@
       overflow-x: auto;
     }
     
-    /* Optimize video playback on mobile */
-    video {
-      /* Ensure video shows first frame on mobile */
-      object-fit: cover;
-      background-color: transparent;
-    }
     
     /* Mobile-specific fixes */
     @media (max-width: 768px) {
@@ -135,65 +129,6 @@
       }
     }
   </style>
-  <!-- Ensure videos show first frame on mobile -->
-  <script>
-    // Function to configure video elements
-    function configureVideos() {
-      const videos = document.querySelectorAll('video');
-      
-      videos.forEach(function(video) {
-        // Add preload metadata to show first frame on mobile
-        if (!video.hasAttribute('preload')) {
-          video.setAttribute('preload', 'metadata');
-        }
-        
-        // Add poster image if not already set
-        if (!video.hasAttribute('poster')) {
-          video.setAttribute('poster', '/assets/promo-poster.jpg');
-        }
-        
-        // Ensure video displays correctly on iOS
-        video.setAttribute('playsinline', 'true');
-        
-        // Force load metadata to display first frame
-        video.load();
-      });
-    }
-    
-    // Run when DOM is ready
-    if (document.readyState === 'loading') {
-      document.addEventListener('DOMContentLoaded', configureVideos);
-    } else {
-      configureVideos();
-    }
-    
-    // Also run after a short delay to catch dynamically loaded videos
-    setTimeout(configureVideos, 500);
-    setTimeout(configureVideos, 1500);
-    
-    // Watch for new video elements added by React
-    if (typeof MutationObserver !== 'undefined') {
-      const observer = new MutationObserver(function(mutations) {
-        mutations.forEach(function(mutation) {
-          mutation.addedNodes.forEach(function(node) {
-            if (node.nodeName === 'VIDEO') {
-              configureVideos();
-            } else if (node.querySelectorAll) {
-              const videos = node.querySelectorAll('video');
-              if (videos.length > 0) {
-                configureVideos();
-              }
-            }
-          });
-        });
-      });
-      
-      observer.observe(document.body, {
-        childList: true,
-        subtree: true
-      });
-    }
-  </script>
 </head>
 <body>
   <div id="root"></div>

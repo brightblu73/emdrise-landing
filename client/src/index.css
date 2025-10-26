@@ -110,12 +110,6 @@ img {
   height: auto;
 }
 
-/* Optimize video playback on mobile */
-video {
-  /* Ensure video shows first frame instead of black screen */
-  object-fit: cover;
-  background-color: transparent;
-}
 
 /* Remove tap highlight on mobile */
 * {
