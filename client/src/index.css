@@ -42,8 +42,6 @@ html {
 body {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   overflow-x: hidden;
-  /* Improve touch responsiveness on mobile */
-  touch-action: pan-y;
 }
 
 /* Optimize scrolling performance */
@@ -103,10 +101,6 @@ body {
   position: sticky;
   top: 0;
   z-index: 50;
-  /* Enable GPU acceleration */
-  transform: translateZ(0);
-  backface-visibility: hidden;
-  /* Don't use will-change on sticky header - it can block initial scroll */
 }
 
 /* Prevent scroll jank from images */
@@ -114,14 +108,10 @@ img {
   display: block;
   max-width: 100%;
   height: auto;
-  /* Improve rendering performance */
-  image-rendering: -webkit-optimize-contrast;
 }
 
 /* Optimize video playback on mobile */
 video {
-  /* Enable hardware acceleration */
-  transform: translateZ(0);
   /* Ensure video shows first frame instead of black screen */
   object-fit: cover;
   background-color: transparent;
