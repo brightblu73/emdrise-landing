@@ -121,8 +121,10 @@ img {
 /* Optimize video playback on mobile */
 video {
   /* Enable hardware acceleration */
-  will-change: transform;
   transform: translateZ(0);
+  /* Ensure video shows first frame instead of black screen */
+  object-fit: cover;
+  background-color: transparent;
 }
 
 /* Remove tap highlight on mobile */
