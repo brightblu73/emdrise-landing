@@ -189,6 +189,65 @@
       }
     }
   </style>
+  
+  <!-- Update launch date and add delay message -->
+  <script>
+    function updateLaunchDate() {
+      // Find and replace "November 2025" with "January 2026"
+      const walker = document.createTreeWalker(
+        document.body,
+        NodeFilter.SHOW_TEXT,
+        null,
+        false
+      );
+      
+      let node;
+      while (node = walker.nextNode()) {
+        if (node.nodeValue.includes('November 2025')) {
+          node.nodeValue = node.nodeValue.replace('November 2025', 'January 2026');
+        }
+        if (node.nodeValue.includes('November')) {
+          node.nodeValue = node.nodeValue.replace(/November(?!\s*2026)/g, 'January 2026');
+        }
+      }
+      
+      // Find the "Coming Soon" badge/lozenge and add delay message after it
+      const comingSoonElements = document.querySelectorAll('*');
+      comingSoonElements.forEach(function(el) {
+        if (el.textContent && el.textContent.includes('Coming Soon') && el.children.length === 0) {
+          // Find the parent container to add the delay message
+          let parent = el.closest('section') || el.closest('div');
+          if (parent && !parent.querySelector('.delay-message')) {
+            // Check if we haven't already added the message
+            const existingMessage = document.querySelector('.delay-message');
+            if (!existingMessage) {
+              const delayMessage = document.createElement('p');
+              delayMessage.className = 'delay-message';
+              delayMessage.style.cssText = 'text-align: center; color: #6b7280; font-size: 0.95rem; margin-top: 1rem; max-width: 500px; margin-left: auto; margin-right: auto; padding: 0 1rem;';
+              delayMessage.textContent = "Apologies, our launch is slightly delayed. We know you are excited to try EMDRise and we appreciate your patience.";
+              
+              // Find the best place to insert - after the coming soon badge area
+              const badge = el.closest('div');
+              if (badge && badge.parentElement) {
+                badge.parentElement.insertBefore(delayMessage, badge.nextSibling);
+              }
+            }
+          }
+        }
+      });
+    }
+    
+    // Run when DOM is ready and after React renders
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', function() {
+        setTimeout(updateLaunchDate, 100);
+        setTimeout(updateLaunchDate, 500);
+      });
+    } else {
+      setTimeout(updateLaunchDate, 100);
+      setTimeout(updateLaunchDate, 500);
+    }
+  </script>
 </head>
 <body>
   <div id="root"></div>
