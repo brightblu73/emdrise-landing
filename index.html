@@ -193,7 +193,7 @@
   <!-- Update launch date and add delay message -->
   <script>
     function updateLaunchDate() {
-      // Find and replace "November 2025" with "January 2026"
+      // Find and replace ALL instances of "November" with "January 2026" in the entire page
       const walker = document.createTreeWalker(
         document.body,
         NodeFilter.SHOW_TEXT,
@@ -202,50 +202,65 @@
       );
       
       let node;
+      let nodesUpdated = 0;
       while (node = walker.nextNode()) {
-        if (node.nodeValue.includes('November 2025')) {
-          node.nodeValue = node.nodeValue.replace('November 2025', 'January 2026');
-        }
-        if (node.nodeValue.includes('November')) {
-          node.nodeValue = node.nodeValue.replace(/November(?!\s*2026)/g, 'January 2026');
+        // Replace "November 2025" with "January 2026"
+        if (node.nodeValue && node.nodeValue.includes('November')) {
+          node.nodeValue = node.nodeValue.replace(/November\s*2025/g, 'January 2026');
+          node.nodeValue = node.nodeValue.replace(/November/g, 'January 2026');
+          nodesUpdated++;
         }
       }
       
-      // Find the "Coming Soon" badge/lozenge and add delay message after it
-      const comingSoonElements = document.querySelectorAll('*');
-      comingSoonElements.forEach(function(el) {
-        if (el.textContent && el.textContent.includes('Coming Soon') && el.children.length === 0) {
-          // Find the parent container to add the delay message
-          let parent = el.closest('section') || el.closest('div');
-          if (parent && !parent.querySelector('.delay-message')) {
-            // Check if we haven't already added the message
-            const existingMessage = document.querySelector('.delay-message');
-            if (!existingMessage) {
-              const delayMessage = document.createElement('p');
-              delayMessage.className = 'delay-message';
-              delayMessage.style.cssText = 'text-align: center; color: #6b7280; font-size: 0.95rem; margin-top: 1rem; max-width: 500px; margin-left: auto; margin-right: auto; padding: 0 1rem;';
-              delayMessage.textContent = "Apologies, our launch is slightly delayed. We know you are excited to try EMDRise and we appreciate your patience.";
-              
-              // Find the best place to insert - after the coming soon badge area
-              const badge = el.closest('div');
-              if (badge && badge.parentElement) {
-                badge.parentElement.insertBefore(delayMessage, badge.nextSibling);
+      // Add delay message only once, after the FIRST "Coming Soon" badge (hero section)
+      if (!document.querySelector('.delay-message')) {
+        const allElements = document.querySelectorAll('*');
+        let firstComingSoonBadge = null;
+        
+        for (let i = 0; i < allElements.length; i++) {
+          const el = allElements[i];
+          // Find elements that contain "Coming Soon" text directly (not in children)
+          if (el.childNodes.length > 0) {
+            for (let j = 0; j < el.childNodes.length; j++) {
+              const child = el.childNodes[j];
+              if (child.nodeType === 3 && child.nodeValue && child.nodeValue.includes('Coming Soon')) {
+                firstComingSoonBadge = el;
+                break;
               }
             }
           }
+          if (firstComingSoonBadge) break;
         }
-      });
+        
+        if (firstComingSoonBadge) {
+          const delayMessage = document.createElement('p');
+          delayMessage.className = 'delay-message';
+          delayMessage.style.cssText = 'text-align: center; color: #6b7280; font-size: 0.95rem; margin-top: 1.5rem; max-width: 500px; margin-left: auto; margin-right: auto; padding: 0 1rem;';
+          delayMessage.textContent = "Apologies, our launch is slightly delayed. We know you are excited to try EMDRise and we appreciate your patience.";
+          
+          // Insert after the badge container
+          const badgeContainer = firstComingSoonBadge.closest('div');
+          if (badgeContainer && badgeContainer.parentElement) {
+            badgeContainer.parentElement.insertBefore(delayMessage, badgeContainer.nextSibling);
+          }
+        }
+      }
+      
+      return nodesUpdated;
     }
     
     // Run when DOM is ready and after React renders
-    if (document.readyState === 'loading') {
-      document.addEventListener('DOMContentLoaded', function() {
-        setTimeout(updateLaunchDate, 100);
-        setTimeout(updateLaunchDate, 500);
-      });
-    } else {
+    function runUpdates() {
       setTimeout(updateLaunchDate, 100);
-      setTimeout(updateLaunchDate, 500);
+      setTimeout(updateLaunchDate, 300);
+      setTimeout(updateLaunchDate, 600);
+      setTimeout(updateLaunchDate, 1000);
+    }
+    
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', runUpdates);
+    } else {
+      runUpdates();
     }
   </script>
 </head>
