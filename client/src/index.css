@@ -4,9 +4,6 @@
 
 /* Mobile scrolling optimizations */
 :root {
-  /* Smooth scrolling with native feel */
-  scroll-behavior: smooth;
-  
   /* Color scheme */
   --background: 0 0% 100%;
   --foreground: 222.2 84% 4.9%;
@@ -50,34 +47,16 @@ body {
   width: 100%;
 }
 
-/* Mobile-optimized animations */
+/* Mobile-optimized animations - start visible to prevent scroll blocking */
 @media (prefers-reduced-motion: no-preference) {
   .fade-in-section {
-    opacity: 0;
-    transform: translateY(30px);
-    transition: opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1),
-                transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
-    /* Use 3D transforms for better mobile performance */
-    transform: translate3d(0, 30px, 0);
-    /* Don't use will-change initially to prevent scroll blocking */
+    opacity: 1;
+    transform: none;
   }
 
   .fade-in-section.in-view {
     opacity: 1;
-    transform: translate3d(0, 0, 0);
-    /* Only apply will-change during animation */
-    will-change: opacity, transform;
-  }
-  
-  /* Remove will-change after animation completes */
-  .fade-in-section.in-view {
-    animation: remove-will-change 0s 0.7s forwards;
-  }
-  
-  @keyframes remove-will-change {
-    to {
-      will-change: auto;
-    }
+    transform: none;
   }
 }
 
