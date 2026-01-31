@@ -150,6 +150,7 @@
       }
       
       const appStoreUrl = "https://apps.apple.com/us/app/emdrise/id6751441958";
+      const appStoreBadgeImg = "https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us?size=250x83&releaseDate=1738281600";
       
       // Update badges to working links
       const badges = [
@@ -159,8 +160,11 @@
       
       badges.forEach(function(badge) {
         if (badge) {
-          // Change "Coming Soon" text to "Download on the App Store"
-          badge.textContent = "Download on the App Store";
+          // Replace content with official Apple badge image
+          badge.innerHTML = `<img src="${appStoreBadgeImg}" alt="Download on the App Store" style="height: 40px; width: auto; display: block;">`;
+          badge.style.background = "none";
+          badge.style.padding = "0";
+          badge.style.border = "none";
           
           // Make it a link if it isn't one
           let link = badge.closest('a');
