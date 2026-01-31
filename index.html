@@ -128,10 +128,10 @@
     }
   </style>
   
-  <!-- Update launch date and add delay message -->
+  <!-- Update launch links and text -->
   <script>
-    function updateLaunchDate() {
-      // Find and replace ALL instances of "November" with "January 2026" in the entire page
+    function updateLaunchInfo() {
+      // Find and replace ALL instances of "January 2026" with empty/live text
       const walker = document.createTreeWalker(
         document.body,
         NodeFilter.SHOW_TEXT,
@@ -141,44 +141,54 @@
       
       let node;
       while (node = walker.nextNode()) {
-        if (node.nodeValue && node.nodeValue.includes('November')) {
-          node.nodeValue = node.nodeValue.replace(/November\s*2025/g, 'January 2026');
-          node.nodeValue = node.nodeValue.replace(/November/g, 'January 2026');
+        if (node.nodeValue) {
+          // Replace launch date text with live text
+          node.nodeValue = node.nodeValue.replace(/Launching\s+January\s+2026/g, 'Available now on the App Store');
+          node.nodeValue = node.nodeValue.replace(/Launching\s+November\s+2025/g, 'Available now on the App Store');
+          node.nodeValue = node.nodeValue.replace(/January\s+2026/g, 'Available Now');
         }
       }
       
-      // Add delay message after hero "Coming Soon" badge only (not footer)
-      const heroBadge = document.querySelector('[data-testid="badge-coming-soon"]');
+      const appStoreUrl = "https://apps.apple.com/us/app/emdrise/id6751441958";
       
-      if (heroBadge && !document.querySelector('.delay-message')) {
-        // Find the parent container that holds the badge and launch date
-        let container = heroBadge.parentElement;
-        
-        // Go up to find a suitable container (usually 2-3 levels up)
-        for (let i = 0; i < 3; i++) {
-          if (container && container.parentElement) {
-            container = container.parentElement;
+      // Update badges to working links
+      const badges = [
+        document.querySelector('[data-testid="badge-coming-soon"]'),
+        document.querySelector('[data-testid="badge-coming-soon-cta"]')
+      ];
+      
+      badges.forEach(function(badge) {
+        if (badge) {
+          // Change "Coming Soon" text to "Download on the App Store"
+          badge.textContent = "Download on the App Store";
+          
+          // Make it a link if it isn't one
+          let link = badge.closest('a');
+          if (!link) {
+            link = document.createElement('a');
+            link.href = appStoreUrl;
+            link.target = "_blank";
+            link.rel = "noopener noreferrer";
+            badge.parentNode.insertBefore(link, badge);
+            link.appendChild(badge);
+          } else {
+            link.href = appStoreUrl;
           }
         }
-        
-        if (container) {
-          const delayMessage = document.createElement('p');
-          delayMessage.className = 'delay-message';
-          delayMessage.style.cssText = 'text-align: center; color: #6b7280; font-size: 0.95rem; margin-top: 1.5rem; max-width: 500px; margin-left: auto; margin-right: auto; padding: 0 1rem;';
-          delayMessage.textContent = "Apologies, our launch is slightly delayed. We know you are excited to try EMDRise and we appreciate your patience.";
-          
-          // Append to the container
-          container.appendChild(delayMessage);
-        }
-      }
+      });
+
+      // Remove the apology message if it exists
+      const apology = document.querySelector('.delay-message');
+      if (apology) apology.remove();
     }
     
     // Run when DOM is ready and after React renders
     function runUpdates() {
-      setTimeout(updateLaunchDate, 100);
-      setTimeout(updateLaunchDate, 300);
-      setTimeout(updateLaunchDate, 600);
-      setTimeout(updateLaunchDate, 1000);
+      setTimeout(updateLaunchInfo, 100);
+      setTimeout(updateLaunchInfo, 300);
+      setTimeout(updateLaunchInfo, 600);
+      setTimeout(updateLaunchInfo, 1000);
+      setTimeout(updateLaunchInfo, 2000);
     }
     
     if (document.readyState === 'loading') {
