@@ -61,12 +61,20 @@ export default function Home() {
             <Shield className="w-8 h-8 text-blue-600" />
             <span className="text-2xl font-bold text-gray-900" data-testid="text-logo">EMDRise</span>
           </div>
-          <button 
-            data-testid="button-download"
-            className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors"
-          >
-            Download App
-          </button>
+          <div className="flex items-center gap-4">
+            <a
+              href="#blog"
+              className="hidden sm:inline-block text-gray-600 hover:text-blue-600 transition-colors"
+            >
+              Blog
+            </a>
+            <button
+              data-testid="button-download"
+              className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors"
+            >
+              Download App
+            </button>
+          </div>
         </div>
       </header>
 
@@ -102,6 +110,31 @@ export default function Home() {
               <Play className="w-5 h-5" />
               Watch Demo
             </button>
+          </div>
+        </div>
+      </section>
+
+      {/* Blog Section */}
+      <section id="blog" className="fade-in-section py-20 bg-blue-50" aria-labelledby="blog-title">
+        <div className="container mx-auto px-4">
+          <div className="max-w-6xl mx-auto">
+            <h2
+              id="blog-title"
+              className="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-12"
+            >
+              From the EMDRise Blog
+            </h2>
+            <div
+              id="soro-blog"
+              className="min-h-[220px] rounded-2xl bg-white border border-blue-100 p-8 shadow-sm"
+            >
+              <div className="text-center text-gray-500">
+                <p className="text-lg font-medium text-gray-700">Latest articles coming soon</p>
+                <p className="mt-2">
+                  Helpful insights and guidance from the EMDRise team will appear here.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -208,21 +241,6 @@ export default function Home() {
             <div className="text-2xl font-bold text-gray-700" data-testid="endorsement-apa">APA</div>
             <div className="text-2xl font-bold text-gray-700" data-testid="endorsement-emdria">EMDRIA</div>
             <div className="text-2xl font-bold text-gray-700" data-testid="endorsement-nice">NICE</div>
-          </div>
-        </div>
-      </section>
-
-      {/* Blog Section */}
-      <section className="fade-in-section py-20 bg-blue-50" aria-labelledby="blog-title">
-        <div className="container mx-auto px-4">
-          <div className="max-w-6xl mx-auto">
-            <h2
-              id="blog-title"
-              className="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-12"
-            >
-              From the EMDRise Blog
-            </h2>
-            <div id="soro-blog" />
           </div>
         </div>
       </section>
