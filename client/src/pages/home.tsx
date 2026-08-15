@@ -35,6 +35,23 @@ export default function Home() {
     };
   }, []);
 
+  useEffect(() => {
+    const blogContainer = document.getElementById("soro-blog");
+    if (!blogContainer || document.querySelector('script[data-soro-blog-embed="true"]')) {
+      return;
+    }
+
+    const script = document.createElement("script");
+    script.src = "https://app.trysoro.com/api/embed/41ae8f66-a769-4d8b-afbe-170c0c1f1c01";
+    script.defer = true;
+    script.dataset.soroBlogEmbed = "true";
+    document.body.appendChild(script);
+
+    return () => {
+      script.remove();
+    };
+  }, []);
+
   return (
     <div className="min-h-screen bg-gradient-to-b from-blue-50 to-white">
       {/* Header - Sticky with GPU acceleration */}
@@ -191,6 +208,21 @@ export default function Home() {
             <div className="text-2xl font-bold text-gray-700" data-testid="endorsement-apa">APA</div>
             <div className="text-2xl font-bold text-gray-700" data-testid="endorsement-emdria">EMDRIA</div>
             <div className="text-2xl font-bold text-gray-700" data-testid="endorsement-nice">NICE</div>
+          </div>
+        </div>
+      </section>
+
+      {/* Blog Section */}
+      <section className="fade-in-section py-20 bg-blue-50" aria-labelledby="blog-title">
+        <div className="container mx-auto px-4">
+          <div className="max-w-6xl mx-auto">
+            <h2
+              id="blog-title"
+              className="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-12"
+            >
+              From the EMDRise Blog
+            </h2>
+            <div id="soro-blog" />
           </div>
         </div>
       </section>
