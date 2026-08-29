@@ -81,6 +81,49 @@ export default function Home() {
       {/* Hero Section */}
       <section className="fade-in-section container mx-auto px-4 py-20 md:py-32">
         <div className="max-w-4xl mx-auto text-center">
+          <aside
+            role="alert"
+            aria-labelledby="closure-notice-title"
+            className="max-w-3xl mx-auto mb-12 rounded-2xl border border-amber-200 bg-amber-50 p-6 md:p-8 text-left shadow-sm"
+          >
+            <h2
+              id="closure-notice-title"
+              className="text-2xl md:text-3xl font-bold text-gray-900 mb-5"
+            >
+              EMDRise is closing
+            </h2>
+            <div className="space-y-4 text-gray-700 leading-relaxed">
+              <p>
+                EMDRise will stop working on 26 September 2026. After that date
+                the guided sessions will no longer load.
+              </p>
+              <p>
+                Your subscription will not renew and you will not be charged
+                again.
+              </p>
+              <p>
+                If you have paid for a period that runs beyond 26 September,
+                you can request a refund from Apple at{" "}
+                <a
+                  href="https://reportaproblem.apple.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="font-medium text-blue-700 underline underline-offset-2 hover:text-blue-800"
+                >
+                  reportaproblem.apple.com
+                </a>
+                . Refunds are handled by Apple, not by us.
+              </p>
+              <p>
+                If you have been using EMDRise to work on something difficult,
+                try not to stop abruptly. Finish anything you are partway
+                through if you can. If you want to continue, EMDR with a
+                therapist is the fuller version of what this app offers, and
+                the EMDR Association can point you to accredited therapists.
+              </p>
+              <p>Thank you for using EMDRise.</p>
+            </div>
+          </aside>
           <h1 
             data-testid="text-hero-title"
             className="text-4xl md:text-6xl font-bold text-gray-900 mb-6"
